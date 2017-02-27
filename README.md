@@ -1,14 +1,5 @@
 # 1702-FSA-NY Library
 
-## Junior Phase
-
-### Helpful Resources/Links
-- [Effective git and github usage for pairing on workshops](https://gist.github.com/omriBernstein/4fd2c21be8416d5e5a69aabc6fa94b82)
-- [Fullstack Student / Alumni Blogs List](https://github.com/FullstackAcademy/student-blogs)
-- [Gist: Debugging](https://gist.github.com/glebec/8a0d06e54a4b3f95a33392f948e97b6a)
-
----
-
 ## Foundations
 
 ### Fullstack Test First Solution Videos:
@@ -28,3 +19,17 @@
 - [Website: The Object Playground](http://www.objectplayground.com/).
 - [Writeup: Closure](https://gist.github.com/glebec/6934d2217470a9ef2339f5c28a4b1aff)
 - [Foundations Checkpoint Solution (gist)](https://gist.github.com/ScottDalessandro/a95f6c6cac4b8d735860d0a8e598e5bf)
+
+---
+
+## Junior Phase
+
+### Helpful Resources/Links
+
+- [Effective git and github usage for pairing on workshops](https://gist.github.com/omriBernstein/4fd2c21be8416d5e5a69aabc6fa94b82)
+- [Fullstack Student / Alumni Blogs List](https://github.com/FullstackAcademy/student-blogs)
+- [Gist: Debugging](https://gist.github.com/glebec/8a0d06e54a4b3f95a33392f948e97b6a)
+
+### Data Structures
+
+- Lecture: Data Structures Part I: [first half](https://youtu.be/7bIAutD29BE), [second half](https://youtu.be/E9HEFxcALNM)
