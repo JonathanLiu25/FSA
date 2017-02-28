@@ -34,4 +34,4 @@
 ### Data Structures
 
 - Lecture: Data Structures Part I: [first half](https://youtu.be/7bIAutD29BE), [second half](https://youtu.be/E9HEFxcALNM)
-- [Review: Parts I and II](https://www.youtube.com/watch?v=96J_nObHWe0) and [solution diff](https://github.com/FullstackAcademy/1702-FSA-NY-Library/commit/9eba3065eb02014062cf30183248b61645f0b8c6)
+- [Review: Parts I and II](https://www.youtube.com/watch?v=96J_nObHWe0) and [Part I solution diff](https://github.com/FullstackAcademy/1702-FSA-NY-Library/commit/9eba3065eb02014062cf30183248b61645f0b8c6)
