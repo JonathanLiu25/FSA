@@ -19,6 +19,7 @@
 - [Website: The Object Playground](http://www.objectplayground.com/).
 - [Writeup: Closure](https://gist.github.com/glebec/6934d2217470a9ef2339f5c28a4b1aff)
 - [Foundations Checkpoint Solution (gist)](https://gist.github.com/ScottDalessandro/a95f6c6cac4b8d735860d0a8e598e5bf)
+- [Q & A, Post Checkpoint](https://youtu.be/9ZkFsxA_dyo)
 
 ---
 
