@@ -34,3 +34,4 @@
 ### Data Structures
 
 - Lecture: Data Structures Part I: [first half](https://youtu.be/7bIAutD29BE), [second half](https://youtu.be/E9HEFxcALNM)
+- [Review: Parts I and II](https://www.youtube.com/watch?v=96J_nObHWe0)
