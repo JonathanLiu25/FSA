@@ -1,3 +1,4 @@
+// es6 Classes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 class BinarySearchTree {
   constructor(val) {
     this.value = val;

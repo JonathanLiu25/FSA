@@ -17,7 +17,7 @@ class LinkedList {
     addToHead(v) {
 
         // es6 variable declaration with `const`: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
-        // Just like `var`, except you can not reassign this variable
+        // Just like `var`, except you can NOT reassign this variable
         const newNode = new Node(v);
         const formerHead = this.head;
 

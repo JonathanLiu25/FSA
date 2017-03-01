@@ -1,3 +1,4 @@
+// es6 Classes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 class Queue {
 
     constructor() {
@@ -12,6 +13,8 @@ class Queue {
     }
 
     dequeue() {
+        // es6 variable declaration with `const`: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
+        // Just like `var`, except you can NOT reassign this variable
         const element = this.list[this.head];
         if (!element) return;
         this.head++;

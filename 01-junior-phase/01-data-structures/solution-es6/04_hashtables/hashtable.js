@@ -1,3 +1,4 @@
+// es6 Classes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 class HashNode {
   constructor(key, val) {
     this.value = val;
@@ -6,8 +7,10 @@ class HashNode {
 }
 
 class HashTable {
-  constructor() {
-    this.numBuckets = 35;
+  // default parameters: If parameter is undefined we set it
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+  constructor(num = 35) {
+    this.numBuckets = num;
     this.buckets = new Array(35);
   }
   set(key, val) {
