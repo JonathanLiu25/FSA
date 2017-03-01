@@ -1,3 +1,5 @@
+http://wesbos.com/let-vs-const/
+
 # Test-first Data Structures
 
 *NOTE: you are encouraged to follow the workshop text for this repo, which covers the following in greater detail.*
