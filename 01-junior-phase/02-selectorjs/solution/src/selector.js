@@ -92,6 +92,48 @@ var matchFunctionMaker = function (selector) {
     return matchFunction;
 };
 
+// // switch...case
+// var matchFunctionMaker = function (selector) {
+
+//     var selectorType = selectorTypeMatcher(selector);
+//     var matchFunction;
+//     switch (selectorType) {
+//         case 'id': 
+//             // define matchFunction for id
+//             matchFunction = function (element) {
+//                 return element.id === selector.slice(1);
+//             };
+//             break;
+//         case "class":
+//             // define matchFunction for class
+//             matchFunction = function (element) {
+//                 var classes = element.className.split(' ');
+//                 return classes.indexOf(selector.slice(1)) !== -1;
+//             };
+//             break;
+//         case "tag.class":
+//             // define matchFunction for tag.class
+//             matchFunction = function (element) {
+
+//                 var tag = selector.split('.')[0];
+//                 var theClass = selector.split('.')[1];
+//                 var classes = element.className.split(' ');
+
+//                 return classes.indexOf(theClass) !== -1
+//                        && element.tagName.toLowerCase() === tag.toLowerCase();
+//             };
+//             break;
+
+//         case "tag":
+//             // define matchFunction for tag
+//             matchFunction = function (element) {
+//                 return element.tagName.toLowerCase() === selector.toLowerCase();
+//             };
+//             break;
+//     }
+//     return matchFunction;
+// };
+
 var $ = function (selector) {
     var elements;
     var selectorMatchFunc = matchFunctionMaker(selector);
