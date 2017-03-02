@@ -45,5 +45,12 @@
 
 ### Selector.js
 
+- Lecture: Intro to the DOM. First half of the live recording failed, so [here is 1701's lecture](https://www.youtube.com/watch?v=iXPuFAmTaNQ&feature=youtu.be), and here is the [second half of our lecture](https://youtu.be/qRva5rB9Ms0) that was successfully recorded
 - [Review](https://www.youtube.com/watch?v=WhVEZPsOP4I) and [solution diff](https://github.com/FullstackAcademy/1702-FSA-NY-Library/commit/e1634c901ee4ca0f3c4df1ea406d813a04e1c05d)
 - [Q & A](https://youtu.be/lxNE6q92pko)
+
+
+### Sorting and Algorithm Analysis
+
+- Lecture: [Algorithms and Heuristics, Big O, Bubble and Merge Sort](https://youtu.be/wUCxp-O5TdQ)
+
