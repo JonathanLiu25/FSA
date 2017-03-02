@@ -38,3 +38,7 @@
 - Part I [q & a](https://youtu.be/JHtq5czijz0) and [solution diff](https://github.com/FullstackAcademy/1702-FSA-NY-Library/commit/9eba3065eb02014062cf30183248b61645f0b8c6)
 - Lecture: Data Structures Part II: [hash tables](https://youtu.be/fJC6U27QoFc) (live recording failed unexpectedly, watch the first half of the linked video to see the previous cohort's recorded lecture) and [trees](https://youtu.be/RJmViXfxbmw)
 - Part II [q & a](https://youtu.be/s-OJZqnVw9Q)
+
+### Selector.js
+
+- [Review](https://www.youtube.com/watch?v=WhVEZPsOP4I)
