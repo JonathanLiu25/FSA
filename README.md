@@ -41,4 +41,4 @@
 
 ### Selector.js
 
-- [Review](https://www.youtube.com/watch?v=WhVEZPsOP4I)
+- [Review](https://www.youtube.com/watch?v=WhVEZPsOP4I) and [solution diff](https://github.com/FullstackAcademy/1702-FSA-NY-Library/commit/e1634c901ee4ca0f3c4df1ea406d813a04e1c05d)
