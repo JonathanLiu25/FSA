@@ -31,14 +31,18 @@
 ### gitignores
 
 - not adding particular files
-
----
-
-## Pair programming
+- "hashed" lines are comments
+- other lines are file / folder patterns to "ignore"
+- generally, `.gitignore` files will be in the root folder of the project ("git repo")
+- but they can go anywhere!
 
 ---
 
 ## Editors
+
+### configuring linter properly
+
+- try it out from Toolbox workshop and reach out if anything goes wrong!
 
 ---
 
@@ -46,15 +50,34 @@
 
 ### tab autocomplete
 
----
-
-## Key commands in sublime
-
-### configuring linter properly
+- you can find awesome autocomplete scripts out there (be careful downloading random scripts)
 
 ---
 
 ## Neural debugger
 
-### thought process
-### best practices
+### general notes
+
+- can't live without `debugger`
+- there's no such thing as working code
+- sometimes you do this even when your code is "working" and you don't know why
+
+### thought process / best practices
+
+*Something isn't working as expected, what next...*
+
+- are there errors?
+  - what are they? look them up
+  - line number! stack trace!
+  - go find that line of code AND THEN look at the error message again and figure out what it *means*
+- isolate the bug
+  - narrow down the exact problem area
+  - comment things out if you want to
+- break it worse!
+- log stuff, deeply
+- adding "breakpoints", `debugger`
+  - investigate state of variables as program steps forward
+  - add "watchers"
+  - see callstack from here
+- *be the machine*
+- refactor code if you don't understand it in the first place
