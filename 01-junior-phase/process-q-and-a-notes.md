@@ -1,5 +1,9 @@
 ## Git / github
 
+### if you get stuck in vim
+
+- ESC, :, q, ENTER
+
 ### no login from cli?
 
 - [add ssh keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
@@ -22,8 +26,11 @@
 - `revert` "undoes" them, but does not overwrite history
 - SO PREFER REVERT
 - give either a commit hash, and it'll zoom you back in time to that spot
+- `git log` to see commits, find commit hashes (or go look at them in github)
 
 ### gitignores
+
+- not adding particular files
 
 ---
 
