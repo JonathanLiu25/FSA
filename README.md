@@ -31,6 +31,10 @@
 - [Fullstack Student / Alumni Blogs List](https://github.com/FullstackAcademy/student-blogs)
 - [Gist: Debugging](https://gist.github.com/glebec/8a0d06e54a4b3f95a33392f948e97b6a)
 
+### Extras
+
+- [Q & A: "Process" and Tools](https://youtu.be/-8K8IW0yMvE)
+
 ### Data Structures
 
 - Lecture: Data Structures Part I: [first half](https://youtu.be/7bIAutD29BE), [second half](https://youtu.be/E9HEFxcALNM)
@@ -42,3 +46,4 @@
 ### Selector.js
 
 - [Review](https://www.youtube.com/watch?v=WhVEZPsOP4I) and [solution diff](https://github.com/FullstackAcademy/1702-FSA-NY-Library/commit/e1634c901ee4ca0f3c4df1ea406d813a04e1c05d)
+- [Q & A](https://youtu.be/lxNE6q92pko)
