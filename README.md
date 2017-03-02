@@ -54,3 +54,7 @@
 
 - Lecture: [Algorithms and Heuristics, Big O, Bubble and Merge Sort](https://youtu.be/wUCxp-O5TdQ)
 
+
+### Game of Life
+
+- [Lecture](https://youtu.be/BOG9YCzlXgw)
