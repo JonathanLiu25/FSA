@@ -1,3 +1,18 @@
+var toggleCell = function (cell) {
+  
+  // QUESTION TO ASK YOURSELF: What is "this" equal to here?
+  
+  // how to set the style of the cell when it's clicked
+  if (cell.dataset.status == 'dead') {
+    cell.className = 'alive';
+    cell.dataset.status = 'alive';
+  } else {
+    cell.className = 'dead';
+    cell.dataset.status = 'dead';
+  }
+  
+};
+
 var gameOfLife = {
   
   width: 12, 
@@ -35,6 +50,12 @@ var gameOfLife = {
       and pass into func, the cell and the cell's x & y
       coordinates. For example: iteratorFunc(cell, x, y)
     */
+    for (var x = 0; x < this.width; x++) {
+      for (var y = 0; y < this.height; y++) {
+        var cell = document.getElementById(x + '-' + y);
+        iteratorFunc(cell, x, y); // this = window
+      }
+    }
   },
   
   setupBoardEvents: function() {
@@ -52,23 +73,39 @@ var gameOfLife = {
     // Here is how we would catch a click event on just the 0-0 cell
     // You need to add the click event on EVERY cell on the board
     
-    var onCellClick = function (e) {
-      
-      // QUESTION TO ASK YOURSELF: What is "this" equal to here?
-      
-      // how to set the style of the cell when it's clicked
-      if (this.dataset.status == 'dead') {
-        this.className = 'alive';
-        this.dataset.status = 'alive';
-      } else {
-        this.className = 'dead';
-        this.dataset.status = 'dead';
-      }
-      
-    };
     
-    var cell00 = document.getElementById('0-0');
-    cell00.addEventListener('click', onCellClick);
+    
+    var board = document.getElementById('board');
+    board.addEventListener('click', function (event) {
+      toggleCell(event.target);
+    });
+
+    var stepBtn = document.getElementById('step_btn');
+    // // arrow fn
+    // stepBtn.addEventListener('click', () => {
+    //   this.step();
+    // });
+    var myThisIsAltered = this.step.bind(this);
+    stepBtn.addEventListener('click', myThisIsAltered);
+
+    var playBtn = document.getElementById('play_btn');
+    // arrow fn: its this will be whatever it is HERE, on this line
+    playBtn.addEventListener('click', () => {
+      if (this.stepInterval === null) {
+        this.enableAutoPlay();
+        playBtn.innerText = 'Pause';
+        playBtn.classList.remove('btn-primary');
+        playBtn.classList.add('btn-danger');
+      } else {
+        this.pause();
+        playBtn.innerText = 'Play';
+        playBtn.classList.add('btn-primary');
+        playBtn.classList.remove('btn-danger');
+      }
+    });
+
+    var randomBtn = document.getElementById('reset_btn');
+    var clearBtn = document.getElementById('clear_btn');
   },
 
   step: function () {
@@ -77,14 +114,54 @@ var gameOfLife = {
     // whether the cell should be dead or alive in the next
     // evolution of the game. 
     //
-    // You need to:
-    // 1. Count alive neighbors for all cells
-    // 2. Set the next state of all cells based on their alive neighbors
+    var toToggle = [];
+    this.forEachCell((cell, x, y) => {
+      // You need to:
+      // 1. Count alive neighbors for all cells
+      var count = 0;
+      for (var neighborX = x - 1; neighborX <= x + 1; neighborX++) {
+        if (neighborX < 0 || neighborX >= this.width) {
+          continue;
+        }
+        for (var neighborY = y - 1; neighborY <= y + 1; neighborY++) {
+          if (neighborY < 0 || neighborY >= this.height) {
+            continue;
+          }
+          if (neighborX === x && neighborY === y) {
+            continue;
+          }
+          var neighbor = document.getElementById(neighborX + '-' + neighborY);
+          if (neighbor.dataset.status === 'alive') {
+            count++;
+          }
+        }
+      }
+      // 2. Set the next state of all cells based on their alive neighbors
+      if (cell.dataset.status === 'dead') {
+        if (count === 3) {
+          toToggle.push(cell);
+        }
+      } else {
+        if (count > 3 || count < 2) {
+          // kill it
+          toToggle.push(cell);
+        }
+      }
+    });
+    toToggle.forEach(toggleCell);
+    // function (x) {otherFunc(x)} ~> otherFunc
   },
 
   enableAutoPlay: function () {
     // Start Auto-Play by running the 'step' function
-    // automatically repeatedly every fixed time interval  
+    // automatically repeatedly every fixed time interval 
+    this.stepInterval = setInterval(this.step.bind(this), 100);
+
+  },
+
+  pause: function () {
+    clearInterval(this.stepInterval);
+    this.stepInterval = null;
   }
   
 };
