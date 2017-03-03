@@ -53,8 +53,12 @@
 ### Sorting and Algorithm Analysis
 
 - Lecture: [Algorithms and Heuristics, Big O, Bubble and Merge Sort](https://youtu.be/wUCxp-O5TdQ)
-
+- [Review](https://www.youtube.com/watch?v=Dz0NkaBp-FM)
 
 ### Game of Life
 
 - [Lecture](https://youtu.be/BOG9YCzlXgw)
+
+### Intro to Node and asynchronous operations
+
+- Lecture: recording failed, [here is the node lecture from 1701](https://www.youtube.com/watch?v=pdcNepwem1M) and [here is the asynchronous lecture from 1701](https://www.youtube.com/watch?v=FfF1nYeV9lo&feature=youtu.be). 
