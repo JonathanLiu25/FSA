@@ -1,0 +1,11 @@
+{
+  "name": "lecture-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node myserver.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
