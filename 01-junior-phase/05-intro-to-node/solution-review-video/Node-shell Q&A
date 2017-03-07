@@ -1,0 +1,20 @@
+Node-shell Q&A
+
+Lodash...
+Just a library of cool functions
+
+Piping
+...
+
+$PATH
+A list of directories to search for executables
+
+What does gracefully quit mean?
+from stack overflow: "As node.js is an event-driven runtime the most graceful exit is to exhaust the queue of pending events."
+
+didn't install request... what is the --save flag?
+it saves the node module as a dependency of your app
+
+fs.readfile vs fs.readfilesync
+readfilesync is the synchronous version -- you will probably never use this
+
