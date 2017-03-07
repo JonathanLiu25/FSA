@@ -65,3 +65,4 @@
 ### Intro to Node and asynchronous operations
 
 - Lecture: recording failed, [here is the node lecture from 1701](https://www.youtube.com/watch?v=pdcNepwem1M) and [here is the asynchronous lecture from 1701](https://www.youtube.com/watch?v=FfF1nYeV9lo&feature=youtu.be). 
+- [Review video](https://www.youtube.com/watch?v=v_lhkZ849jk)
