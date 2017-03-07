@@ -70,3 +70,4 @@
 ### Express
 
 - Lecture: [first half](https://youtu.be/0de-7-KIZLM) and [second half](https://youtu.be/hVeyu79wz0o) (the second half cuts out midway through, [here's a recording from last cohort]( https://youtu.be/SGQ5Qt9-ZOE))
+- [Recorded Review: Twitter](https://youtu.be/0NvankAwgHU)
