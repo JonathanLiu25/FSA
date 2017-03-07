@@ -1,0 +1,12 @@
+<img src="/bahhh.jpeg">
+<h2>All tweets</h2>
+<ul>
+  {% for aTweet in allTweets %}
+  <li>{{aTweet.text}}</li>
+  {% endfor %}
+</ul>
+<form method="POST" action="/tweets">
+  <div>Username: <input type="text" name="username"></div>
+  <div>Tweet: <input type="text" name="tweet"></div>
+  <div><input type="submit"></div>
+</form>
