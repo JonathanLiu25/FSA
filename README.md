@@ -3,10 +3,13 @@
 ## Customized Norms
 
 1. Don't take control of a project, respect your partner, listen to their ideas, and accomodate their goals. Especially consider how any unconscious bias you may hold could play out negatively—for example, consider evidence that [men are more likely to interrupt women](http://www.slate.com/blogs/lexicon_valley/2014/07/23/study_men_interrupt_women_more_in_tech_workplaces_but_high_ranking_women.html)
+
 2. If you work at night without your partner:
   a. Be willing to start over from scratch the next day
   b. Let them drive in general (don't just redo the code you came up with solo)
+
 3. Come to equal understanding before continuing, don't leave your partner behind
+
 4. Be best friends
 
 ## Foundations
