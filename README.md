@@ -73,3 +73,7 @@
 - [Recorded Review: Twitter](https://youtu.be/0NvankAwgHU)
 - [Live Review: Twitter](https://youtu.be/_66DUag9rl4)
 - [Q & A: Twitter](https://youtu.be/vmdF6ITF7Nw)
+
+### SQL
+
+- [Lecture](https://youtu.be/jCw_oWG4awE)
