@@ -90,3 +90,7 @@
 
 - [Lecture](https://youtu.be/jCw_oWG4awE)
 - [Pre-recorded Review](https://www.youtube.com/watch?v=meRYC47giig)
+
+### Schema design 
+
+- [Lecture](https://youtu.be/9Z39sKRs8f8)
