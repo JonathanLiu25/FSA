@@ -71,3 +71,5 @@
 
 - Lecture: [first half](https://youtu.be/0de-7-KIZLM) and [second half](https://youtu.be/hVeyu79wz0o) (the second half cuts out midway through, [here's a recording from last cohort]( https://youtu.be/SGQ5Qt9-ZOE))
 - [Recorded Review: Twitter](https://youtu.be/0NvankAwgHU)
+- [Live Review: Twitter](https://youtu.be/_66DUag9rl4)
+- [Q & A: Twitter](https://youtu.be/vmdF6ITF7Nw)
