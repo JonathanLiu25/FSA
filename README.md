@@ -89,3 +89,4 @@
 ### SQL
 
 - [Lecture](https://youtu.be/jCw_oWG4awE)
+- [Pre-recorded Review](https://www.youtube.com/watch?v=meRYC47giig)
