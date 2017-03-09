@@ -96,3 +96,7 @@
 ### Schema design 
 
 - [Lecture](https://youtu.be/9Z39sKRs8f8)
+
+### Postgres
+
+- [Lecture: Postgres and Node with Postgres](https://youtu.be/aJEaQIPp6F0)
