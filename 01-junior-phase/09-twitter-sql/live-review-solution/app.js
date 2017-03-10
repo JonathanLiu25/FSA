@@ -23,7 +23,26 @@ app.use(bodyParser.json()); // would be for AJAX requests
 
 // static and dynamic routing
 app.use(express.static(path.join(__dirname, '/public')));
+
 app.use('/', routes);
+
+// // "ordinary" success handling middleware
+// app.use(function (a,b,c) { });
+
+// // "error handling" middleware
+// app.use(function (a,b,c,d) { });
+
+app.use(function (req, res, next) {
+  // next(err) will not take you here!
+  next();
+});
+
+app.use(function (err, req, res, next) {
+  console.error('There was an error and Im sad about it');
+  console.error(err.message);
+  console.error(err.stack);
+  res.status(err.status || 500).send(err);
+});
 
 // start the server
 app.listen(1337, function(){
