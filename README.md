@@ -100,3 +100,4 @@
 ### Postgres
 
 - [Lecture: Postgres and Node with Postgres](https://youtu.be/aJEaQIPp6F0)
+- [Live Review: Twitter SQL](https://youtu.be/b_u9HgYkfsY)
