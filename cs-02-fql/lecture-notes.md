@@ -156,3 +156,28 @@ What does that do? Reads the contents of a file in a synchronous fashion—block
 We're doing that because it simplifies the problem at hand—we're focusing on JS, data persistence, understanding how a DBMS might work internally. If you're brave enough, feel free to take on the async challenge, but I don't recommend it.
 
 It's also maybe sort-of OK for a DBMS to be blocking like this.
+
+---
+
+# Indexing
+
+Provides a performance boost when looking up things in our tables, especially useful for repeated queries!
+
+"Pre-orders" the database according a column or certain column—effectively prepared for fast querying on *that* particualr column. (Sorted index, could be a BST.)
+
+Hashed index, think: glossary. Additional record not directly in the same table, but still accessible, that will allow us to query THAT "glossary" instead of simply searching through the whole "book".
+
+With an index, we look in the "index table" first to VASTLY narrow our search space.
+
+Is it all rainbows?
+
+Well: we have to manage them. If we update any row in a table that has been indexed, we also need to update the "index table". SO if we add a row, change one, or delete one.
+
+Also: space. This index table is a lot of redundant information. Every index table will add `O(n)` space where `n` is the number of rows in the table.
+
+Some downsides:
+
+1. Write operations will be (slightly) more expensive
+2. It will be larger
+
+For "enumerable" columns with a small set of values, indexing can actually slow things down.
