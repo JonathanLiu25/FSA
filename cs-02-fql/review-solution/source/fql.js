@@ -15,7 +15,7 @@ FQL.prototype.fork = function () {
 }
 
 FQL.prototype.get = function () {
-  const ids = this._table.getRowIds();
+  const ids = this._plan.getStartingIds(this._table);
   const table = this._table;
   // arrow function inherit `this` from outer scope
   const rows = [];
@@ -56,7 +56,19 @@ FQL.prototype.select = function (...columns) {
 
 FQL.prototype.where = function (criteria) {
   const fql = this.fork();
-  fql._plan.setCriteria(criteria);
+  const indexedCriteria = {};
+  const nonIndexedCriteria = {};
+  // look at each key
+  Object.keys(criteria).forEach((column) => {
+    // check if index table exists for that key
+    if (this._table.hasIndexTable(column)) {
+      indexedCriteria[column] = criteria[column];
+    } else {
+      nonIndexedCriteria[column] = criteria[column];
+    }
+  });
+  fql._plan.setCriteria(nonIndexedCriteria);
+  fql._plan.setIndexedCriteria(indexedCriteria);
   return fql;
 };
 

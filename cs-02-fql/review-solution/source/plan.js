@@ -34,6 +34,34 @@ Plan.prototype.setCriteria = function (criteria) {
   this._searchCriteria = criteria;
 };
 
+Plan.prototype.setIndexedCriteria = function (criteria) {
+  this._indexedCriteria = criteria;
+};
+
+Plan.prototype.getStartingIds = function (table) {
+  if (!this._indexedCriteria || !Object.keys(this._indexedCriteria).length) {
+    return table.getRowIds();
+  }
+  const allIds = Object.keys(this._indexedCriteria)
+  .map((column) => {
+    const indexTableKey = this._indexedCriteria[column];
+    const indexTable = table.getIndexTable(column);
+    const idsArray = indexTable[indexTableKey];
+    const idsSet = new Set(idsArray);
+    return idsSet;
+  });
+  const jointIdSet = allIds.reduce(function (accumulatedIds, moreIds) {
+    const jointSet = new Set();
+    for (const id of accumulatedIds) {
+      if (moreIds.has(id)) {
+        jointSet.add(id);
+      }
+    }
+    return jointSet;
+  });
+  return jointIdSet;
+};
+
 // Plan.prototype.matchesRow = function (row) {
 //   // returns true if there are no criteria
 //   if (!this.hasOwnProperty('_searchCriteria')) return true;
