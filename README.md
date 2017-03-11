@@ -113,3 +113,7 @@
 ### FQL
 
 - [Intro Lecture](https://youtu.be/ZLElov2WFCA)
+- [Review: Parts I & II](https://youtu.be/kWmNUDIkwHs)
+- [Lecture: Indexing (from a previous cohort, something went wrong with today's live recording :/)](https://youtu.be/L_yfGa53WU8)
+- [Review: Part III](https://youtu.be/j21x5p2Yas4)
+- [Review: Part IV (from a previous cohort)](https://youtu.be/la8lpWPTwxA?t=50m30s)
