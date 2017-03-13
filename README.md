@@ -113,6 +113,7 @@
 ### Wikistack
 
 - [Lecture: Intro to ORMs and Sequelize](https://youtu.be/SnQmnKQUz-k)
+- Review: [Part I](https://www.youtube.com/watch?v=stTJmJ-uGtg) and [Part II](https://www.youtube.com/watch?v=7iPyaokenlg)
 
 ---
 
