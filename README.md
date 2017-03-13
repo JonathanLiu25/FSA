@@ -12,6 +12,20 @@
 
 4. Be best friends
 
+## Helpful Resources/Links
+
+- [Effective git and github usage for pairing on workshops](https://gist.github.com/omriBernstein/4fd2c21be8416d5e5a69aabc6fa94b82)
+- [Fullstack Student / Alumni Blogs List](https://github.com/FullstackAcademy/student-blogs)
+- [Gist: Debugging](https://gist.github.com/glebec/8a0d06e54a4b3f95a33392f948e97b6a)
+- [Gist: Some code wars problems, categorized](https://gist.github.com/joedotjs/7614f84264bf20e49d39)
+
+## Extras
+
+- [Q & A: "Process" and Tools](https://youtu.be/-8K8IW0yMvE)
+- [Review: Express Self Checkpoint](https://www.youtube.com/watch?v=op6AcWbwwbE)
+
+---
+
 ## Foundations
 
 ### Fullstack Test First Solution Videos:
@@ -36,17 +50,6 @@
 ---
 
 ## Junior Phase
-
-### Helpful Resources/Links
-
-- [Effective git and github usage for pairing on workshops](https://gist.github.com/omriBernstein/4fd2c21be8416d5e5a69aabc6fa94b82)
-- [Fullstack Student / Alumni Blogs List](https://github.com/FullstackAcademy/student-blogs)
-- [Gist: Debugging](https://gist.github.com/glebec/8a0d06e54a4b3f95a33392f948e97b6a)
-- [Gist: Some code wars problems, categorized](https://gist.github.com/joedotjs/7614f84264bf20e49d39)
-
-### Extras
-
-- [Q & A: "Process" and Tools](https://youtu.be/-8K8IW0yMvE)
 
 ### Data Structures
 
