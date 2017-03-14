@@ -26,7 +26,7 @@ router.post('/', function (req, res, next) {
             }
         })
         .spread(function (user) {
-            return Page.create(req.body)
+            return Page.create(req.body) // `Page.create` takes an object, `req.body` is an object, the key names of `req.body` should correspond to field names on `Page` model definition
                 .then(function (page) {
                     return page.setAuthor(user);
                 });

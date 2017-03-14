@@ -89,14 +89,17 @@ var User = db.define('user', {
     },
     email: {
         type: Sequelize.STRING,
-        isEmail: true,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            isEmail: true
+        }
     }
 });
 
 Page.belongsTo(User, {
     as: 'author'
 });
+// User.hasMany(page, {foreignKey: 'authorId'}); // reverse association
 
 module.exports = {
     Page: Page,
