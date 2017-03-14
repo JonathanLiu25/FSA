@@ -114,6 +114,11 @@
 
 - [Lecture: Intro to ORMs and Sequelize](https://youtu.be/SnQmnKQUz-k)
 - Review: [Part I](https://www.youtube.com/watch?v=stTJmJ-uGtg) and [Part II](https://www.youtube.com/watch?v=7iPyaokenlg)
+- [Q & A](https://youtu.be/KfTniwc8IeI)
+
+### Testing Wikistack
+
+- [Lecture](https://youtu.be/AL0F7vhz7lM)
 
 ---
 
