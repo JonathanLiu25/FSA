@@ -122,6 +122,9 @@
 - [Lecture](https://youtu.be/AL0F7vhz7lM)
 - [Review](https://youtu.be/eRCVQeG8WQ8)
 
+### Promise Mechanics
+- [Lecture](https://youtu.be/Qd1r140CtkQ)
+
 ---
 
 ## CS Saturday
