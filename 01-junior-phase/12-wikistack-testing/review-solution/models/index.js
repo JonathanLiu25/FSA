@@ -5,7 +5,10 @@ var marked = require('marked');
 var Page = db.define('page', {
     title: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+            notEmpty: true
+        }
     },
     urlTitle: {
         type: Sequelize.STRING,

@@ -1,12 +1,48 @@
+const Page = require('../models').Page;
+const User = require('../models').User;
+const db = require('../models').db;
+const expect = require('chai').expect;
+const chai = require('chai');
+const chaiThings = require('chai-things');
+chai.use(chaiThings);
+
 describe('Page model', function () {
 
+  before(function () {
+    return db.sync({force: true});
+  });
+
+  afterEach(function () {
+    return Promise.all([
+      Page.destroy({where: {}}),
+      User.destroy({where: {}})
+    ]);
+  });
+
   describe('Virtuals', function () {
+    
     describe('route', function () {
-      it('returns the url_name prepended by "/wiki/"');
+      
+      it('returns the url_name prepended by "/wiki/"', function () {
+        const page = Page.build({
+          urlTitle: 'Anolis_carolinensis'
+        });
+        expect(page.route).to.equal('/wiki/Anolis_carolinensis');
+      });
+
     });
+    
     describe('renderedContent', function () {
-      it('converts the markdown-formatted content into HTML');
+      
+      it('converts the markdown-formatted content into HTML', function () {
+        const page = Page.build({
+          content: '## header **bolded thing** *italic thing*'
+        });
+        expect(page.renderedContent).to.equal('<h2 id="header-bolded-thing-italic-thing-">header <strong>bolded thing</strong> <em>italic thing</em></h2>\n');
+      });
+
     });
+
   });
 
   describe('Class methods', function () {
@@ -25,9 +61,40 @@ describe('Page model', function () {
   });
 
   describe('Validations', function () {
-    it('errors without title');
+
+    it('errors without title', function () {
+      return Page.create({})
+      .then(
+        function successHandler () {
+          throw Error('promise succeeded when it should have failed');
+        },
+        function errorHandler (err) {
+          expect(err).to.exist;
+          expect(err.errors).to.include.a.thing.with.property('message', 'title cannot be null');
+        }
+      );
+    });
+
+    it('errors with empty title', function () {
+      return Page.create({
+        title: ''
+      })
+      .then(
+        function successHandler () {
+          throw Error('promise succeeded when it should have failed');
+        },
+        function errorHandler (err) {
+          expect(err).to.exist;
+          expect(err.errors).to.include.a.thing.with.property('message', 'Validation notEmpty failed');
+          expect(err.errors).to.include.a.thing.with.property('path', 'title');
+        }
+      );
+    });
+    
     it('errors without content');
+    
     it('errors given an invalid status');
+  
   });
 
   describe('Hooks', function () {
