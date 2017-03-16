@@ -23,6 +23,7 @@
 
 - [Q & A: "Process" and Tools](https://youtu.be/-8K8IW0yMvE)
 - [Review: Express Self Checkpoint](https://www.youtube.com/watch?v=op6AcWbwwbE)
+- [Overflow: Visible March 15](https://youtu.be/OGSwhOQgvQQ)
 
 ---
 
@@ -119,6 +120,10 @@
 ### Testing Wikistack
 
 - [Lecture](https://youtu.be/AL0F7vhz7lM)
+- [Review](https://youtu.be/eRCVQeG8WQ8)
+
+### Promise Mechanics
+- [Lecture](https://youtu.be/Qd1r140CtkQ)
 
 ---
 
