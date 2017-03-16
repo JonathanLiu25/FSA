@@ -123,7 +123,14 @@
 - [Review](https://youtu.be/eRCVQeG8WQ8)
 
 ### Promise Mechanics
+
 - [Lecture](https://youtu.be/Qd1r140CtkQ)
+- Review: Pledge - [Chapters 1-3](https://youtu.be/_v22vGzIS4w) and [Chapters 4-5](https://youtu.be/L1fX5nRjjfY)
+- [Q & A: Pledge](https://youtu.be/En3Whbnsnzk)
+
+### HTML & CSS
+
+- [Lecture](https://youtu.be/vEx1tBDQZ94)
 
 ---
 
