@@ -24,6 +24,8 @@
 - [Q & A: "Process" and Tools](https://youtu.be/-8K8IW0yMvE)
 - [Review: Express Self Checkpoint](https://www.youtube.com/watch?v=op6AcWbwwbE)
 - [Overflow: Visible March 15](https://youtu.be/OGSwhOQgvQQ)
+- [Ian's express/sequelize review](https://www.youtube.com/playlist?list=PLkkKgQIx1wZYNoeJXVMAiUJn7BlYYKQwI)
+  - [repo](https://github.com/ianmunrobot/1702-express-review)
 
 ---
 
@@ -80,7 +82,7 @@
 
 ### Intro to Node and asynchronous operations
 
-- Lecture: recording failed, [here is the node lecture from 1701](https://www.youtube.com/watch?v=pdcNepwem1M) and [here is the asynchronous lecture from 1701](https://www.youtube.com/watch?v=FfF1nYeV9lo&feature=youtu.be). 
+- Lecture: recording failed, [here is the node lecture from 1701](https://www.youtube.com/watch?v=pdcNepwem1M) and [here is the asynchronous lecture from 1701](https://www.youtube.com/watch?v=FfF1nYeV9lo&feature=youtu.be).
 - [Review video](https://www.youtube.com/watch?v=v_lhkZ849jk)
 
 ### Express
@@ -97,7 +99,7 @@
 - [Live Review](https://youtu.be/IlXOxCIG4MU)
 - [Q & A](https://youtu.be/yEDv4_a3bno)
 
-### Schema design 
+### Schema design
 
 - [Lecture](https://youtu.be/pbJcAE2xHBE)
 
