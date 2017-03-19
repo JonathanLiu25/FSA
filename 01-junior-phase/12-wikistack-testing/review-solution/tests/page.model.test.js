@@ -3,8 +3,8 @@ const User = require('../models').User;
 const db = require('../models').db;
 const expect = require('chai').expect;
 const chai = require('chai');
-const chaiThings = require('chai-things');
-chai.use(chaiThings);
+const chaiSubset = require('chai-subset');
+chai.use(chaiSubset);
 
 describe('Page model', function () {
 
@@ -70,7 +70,9 @@ describe('Page model', function () {
         },
         function errorHandler (err) {
           expect(err).to.exist;
-          expect(err.errors).to.include.a.thing.with.property('message', 'title cannot be null');
+          expect(err.errors).to.containSubset([{
+            message: 'title cannot be null'
+          }]);
         }
       );
     });
@@ -85,8 +87,10 @@ describe('Page model', function () {
         },
         function errorHandler (err) {
           expect(err).to.exist;
-          expect(err.errors).to.include.a.thing.with.property('message', 'Validation notEmpty failed');
-          expect(err.errors).to.include.a.thing.with.property('path', 'title');
+          expect(err.errors).to.containSubset([{
+            path: 'title',
+            message: 'Validation notEmpty failed'
+          }]);
         }
       );
     });
