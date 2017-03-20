@@ -133,6 +133,8 @@
 ### HTML & CSS
 
 - [Lecture](https://youtu.be/vEx1tBDQZ94)
+- [Review](https://youtu.be/3EwF4WR8dd8)
+
 
 ---
 
