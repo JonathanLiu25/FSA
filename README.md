@@ -22,10 +22,7 @@
 ## Extras
 
 - [Q & A: "Process" and Tools](https://youtu.be/-8K8IW0yMvE)
-- [Review: Express Self Checkpoint](https://www.youtube.com/watch?v=op6AcWbwwbE)
 - [Overflow: Visible March 15](https://youtu.be/OGSwhOQgvQQ)
-- [Ian's express/sequelize review](https://www.youtube.com/playlist?list=PLkkKgQIx1wZYNoeJXVMAiUJn7BlYYKQwI)
-  - [repo](https://github.com/ianmunrobot/1702-express-review)
 
 ---
 
@@ -139,6 +136,19 @@
 
 - [Review: Static UI](https://www.youtube.com/watch?v=AVv495nPzm4&feature=youtu.be)
 - [Lecture: Intro to jQuery](https://youtu.be/RHiKd5GLe6E)
+
+---
+
+## Checkpoints
+
+### Express
+
+- [Review: Express Self Checkpoint](https://www.youtube.com/watch?v=op6AcWbwwbE)
+
+### Express / Sequelize
+
+- [Ian's express/sequelize review](https://www.youtube.com/playlist?list=PLkkKgQIx1wZYNoeJXVMAiUJn7BlYYKQwI) and [repo](https://github.com/ianmunrobot/1702-express-review)
+- [Review: Express / Sequelize Checkpoint](https://youtu.be/MGk2tineSxc)
 
 ---
 
