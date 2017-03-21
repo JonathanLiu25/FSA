@@ -135,6 +135,9 @@
 - [Lecture](https://youtu.be/vEx1tBDQZ94)
 - [Review](https://youtu.be/3EwF4WR8dd8)
 
+### TripPlanner
+
+- [Review](https://www.youtube.com/watch?v=AVv495nPzm4&feature=youtu.be)
 
 ---
 
