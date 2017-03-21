@@ -137,7 +137,8 @@
 
 ### TripPlanner
 
-- [Review](https://www.youtube.com/watch?v=AVv495nPzm4&feature=youtu.be)
+- [Review: Static UI](https://www.youtube.com/watch?v=AVv495nPzm4&feature=youtu.be)
+- [Lecture: Intro to jQuery](https://youtu.be/RHiKd5GLe6E)
 
 ---
 
