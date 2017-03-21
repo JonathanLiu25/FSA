@@ -150,3 +150,9 @@
 - [Lecture: Indexing (from a previous cohort, something went wrong with today's live recording :/)](https://youtu.be/L_yfGa53WU8)
 - [Review: Part III](https://youtu.be/j21x5p2Yas4)
 - [Review: Part IV (from a previous cohort)](https://youtu.be/la8lpWPTwxA?t=50m30s)
+
+### FVS
+- [Immutable Data Structures Lecture](https://youtu.be/1J9PFVgn0Bg)
+- [Immutable Data Structures Review](https://youtu.be/zBnGh8oGlow)
+- [Git Internals Lecture](https://youtu.be/RLlmSJwImeo)
+- [Git Internals Review](https://youtu.be/uJmaTBSqUb0)
