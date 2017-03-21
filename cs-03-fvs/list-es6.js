@@ -9,7 +9,7 @@ class ListNode {
     this.id = getSha1(value);
   }
 
-// recursive approach (see ES5 solution for iterative approach)
+// iterative approach (see ES5 solution for recursive approach)
   toString() {
     const arr = [];
 
