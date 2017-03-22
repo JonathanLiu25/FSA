@@ -39,12 +39,27 @@ var attractionModule = (function () {
     this.$itineraryItem = $('<div class="itinerary-item"></div>')
       .append($title)
       .append($button);
+    // capture self
     var self = this;
-    $button.on('click', function () {
+    $button.on('click', () => {
+      // use `self` (i.e. "outer this") via closure
       tripModule.removeFromCurrent(self); // remove from day model
     });
     return this;
   };
+
+  // // with arrow functions
+  // Attraction.prototype.buildItineraryItem = function () {
+  //   var $button = $('<button class="btn btn-xs btn-danger remove btn-circle">x</button>');
+  //   var $title = $('<span class="title"></span>').text(this.name);
+  //   this.$itineraryItem = $('<div class="itinerary-item"></div>')
+  //     .append($title)
+  //     .append($button);
+  //   $button.on('click', () => { // arrow functions do not receive their own `this` they inherit it
+  //     tripModule.removeFromCurrent(this); // remove from day model
+  //   });
+  //   return this;
+  // };
 
   Attraction.prototype.buildMarker = function () {
     this.marker = mapModule.buildAttractionMarker(this);
