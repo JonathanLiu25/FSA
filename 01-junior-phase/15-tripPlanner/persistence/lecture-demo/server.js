@@ -28,6 +28,22 @@ app.use(volleyball);
 
 app.use(express.static(__dirname));
 
+app.post('/api/hats', function (req, res, next) {
+  Hat.create(req.body)
+  .then(function (createdHat) {
+    res.status(201).json(createdHat);
+  })
+  .catch(next);
+});
+
+app.get('/api/hats', function (req, res, next) {
+  Hat.findAll()
+  .then(function (theHats) {
+    res.json(theHats);
+  })
+  .catch(next);
+});
+
 const port = 3001;
 db.sync()
 .then(function () {
@@ -45,3 +61,4 @@ db.sync()
   console.error(err);
 });
 
+module.exports = db;
