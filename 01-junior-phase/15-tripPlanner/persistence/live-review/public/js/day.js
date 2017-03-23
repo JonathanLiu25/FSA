@@ -93,22 +93,34 @@ var dayModule = (function () {
   // day updating
 
   Day.prototype.addAttraction = function (attraction) {
+    var promise;
     // adding to the day object
     switch (attraction.type) {
       case 'hotel':
         if (this.hotel) this.hotel.hide();
-        this.hotel = attraction;
+        promise = ajaxMethodsModule.setDayHotel(this.id, attraction.id)
+        .then(() => {
+          this.hotel = attraction;
+        });
         break;
       case 'restaurant':
-        utilsModule.pushUnique(this.restaurants, attraction);
+        promise = ajaxMethodsModule.addDayRestaurant(this.id, attraction.id)
+        .then(() => {
+          utilsModule.pushUnique(this.restaurants, attraction);
+        });
         break;
       case 'activity':
-        utilsModule.pushUnique(this.activities, attraction);
+        promise = ajaxMethodsModule.addDayActivity(this.id, attraction.id)
+        .then(() => {
+          utilsModule.pushUnique(this.activities, attraction);
+        });
         break;
       default: console.error('bad type:', attraction);
     }
-    // activating UI
-    attraction.show();
+    promise.then(function () {
+      // activating UI
+      attraction.show();
+    });
   };
 
   Day.prototype.removeAttraction = function (attraction) {

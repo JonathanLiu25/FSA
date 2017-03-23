@@ -46,28 +46,42 @@ var tripModule = (function () {
   });
 
   function addDay () {
-    if (this && this.blur) this.blur(); // removes focus box from buttons
-    var newDay = dayModule.create({ number: days.length + 1 }); // dayModule
-    days.push(newDay);
-    if (days.length === 1) {
-      currentDay = newDay;
-    }
-    switchTo(newDay);
+    $.ajax({
+      method: 'POST',
+      url: '/api/days',
+      data: { number: days.length + 1 } // outgoing request body
+    })
+    .then((databaseDay) => {
+      if (this && this.blur) this.blur(); // removes focus box from buttons
+      var newDay = dayModule.create(databaseDay); // dayModule
+      days.push(newDay);
+      if (days.length === 1) {
+        currentDay = newDay;
+      }
+      switchTo(newDay);
+    });
   }
 
   function deleteCurrentDay () {
-    // prevent deleting last day
-    if (days.length < 2 || !currentDay) return;
-    // remove from the collection
-    var index = days.indexOf(currentDay),
-      previousDay = days.splice(index, 1)[0],
-      newCurrent = days[index] || days[index - 1];
-    // fix the remaining day numbers
-    days.forEach(function (day, i) {
-      day.setNumber(i + 1);
-    });
-    switchTo(newCurrent);
-    previousDay.hideButton();
+    $.ajax({
+      method: 'DELETE',
+      url: `/api/days/${currentDay.id}`
+    })
+    .then(function () {
+      // prevent deleting last day
+      if (days.length < 2 || !currentDay) return;
+      // remove from the collection
+      var index = days.indexOf(currentDay),
+        previousDay = days.splice(index, 1)[0],
+        newCurrent = days[index] || days[index - 1];
+      // fix the remaining day numbers
+      days.forEach(function (day, i) {
+        day.setNumber(i + 1);
+      });
+      switchTo(newCurrent);
+      previousDay.hideButton();
+    })
+    .catch(console.error);
   }
 
   // globally accessible module methods
@@ -75,7 +89,19 @@ var tripModule = (function () {
   var publicAPI = {
 
     load: function () {
-      $(addDay);
+      $.ajax({
+        method: 'GET', url: '/api/days'
+      })
+      .then(function (databaseDays) {
+        if (databaseDays.length === 0) {
+          addDay();
+        } else {
+          databaseDays.forEach(function (databaseDay) {
+            days.push(dayModule.create(databaseDay));
+          });
+          switchTo(days[0]);
+        }
+      });
     },
 
     switchTo: switchTo,
