@@ -139,6 +139,7 @@
 - [Video Review: Trip Planner Live](https://youtu.be/gajJ9BHLiKA)
 - [Q & A: Trip Planner Live](https://youtu.be/2pSFDjd5z3k)
 - [Lecture: AJAX](https://youtu.be/k1UnJPRbcKA)
+- [Recorded Review: Trip Planner Persistence](https://youtu.be/DeFD0EuG4dY)
 
 ---
 
