@@ -150,6 +150,8 @@
 
 ### Express / Sequelize
 
+- [Study guide](https://gist.github.com/khumphrey/e525b7feced2d7acf1d041aca9b23168)
+- [About associations / relationships](https://gist.github.com/joedotjs/4a57c5e2037fa15a25fe52131a21ae91)
 - [Ian's express/sequelize review](https://www.youtube.com/playlist?list=PLkkKgQIx1wZYNoeJXVMAiUJn7BlYYKQwI) and [repo](https://github.com/ianmunrobot/1702-express-review)
 - [Review: Express / Sequelize Checkpoint](https://youtu.be/MGk2tineSxc)
 
