@@ -1,21 +1,21 @@
 'use strict';
 
-var db = require('./database');
-var Sequelize = require('sequelize');
+const db = require('./database');
+const Sequelize = require('sequelize');
 
 // Make sure you have `postgres` running!
 
-var User = require('./user');
+const User = require('./user');
 
 //---------VVVV---------  your code below  ---------VVV----------
 
-var Article = db.define('article', {
+const Article = db.define('article', {
 
   title: {
     type: Sequelize.STRING,
-    allowNull: false,
+    allowNull: false, // don't allow NULL in the SQL table row (validation happening at the database level)
     validate: {
-      notEmpty: true
+      notEmpty: true // don't allow the string to be empty (validation happening at the js level-through sequelize)
     }
   },
   content: {
@@ -39,7 +39,7 @@ var Article = db.define('article', {
   getterMethods: {
     snippet: function () {
       if (!this.content) return ''; // needed for Article.update, oddly
-      return this.content.slice(0, 23) + '...';
+      return `${this.content.slice(0, 23)}...`;
     }
   },
   instanceMethods: {
@@ -49,7 +49,7 @@ var Article = db.define('article', {
   },
   classMethods: {
     findByTitle: function (title) {
-      return this.findOne({where: {title: title}});
+      return this.findOne({where: {title}});
     }
   },
   hooks: {

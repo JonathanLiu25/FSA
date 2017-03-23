@@ -75,6 +75,18 @@ describe('The `Article` model', function () {
 
     });
 
+    it('requires `title`', function () {
+
+      article.title = null;
+
+      return article.validate()
+      .then(function(result) {
+        expect(result).to.be.an.instanceOf(Error);
+        expect(result.message).to.contain('title cannot be null');
+      });
+
+    });
+
     it('requires `title` (in a more strict way than for `content`)', function () {
 
       article.title = '';
