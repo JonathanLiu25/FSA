@@ -137,6 +137,8 @@
 - [Review: Trip Planner Static UI](https://www.youtube.com/watch?v=AVv495nPzm4&feature=youtu.be)
 - [Lecture: Intro to jQuery](https://youtu.be/RHiKd5GLe6E)
 - [Video Review: Trip Planner Live](https://youtu.be/gajJ9BHLiKA)
+- [Q & A: Trip Planner Live](https://youtu.be/2pSFDjd5z3k)
+- [Lecture: AJAX](https://youtu.be/k1UnJPRbcKA)
 
 ---
 
