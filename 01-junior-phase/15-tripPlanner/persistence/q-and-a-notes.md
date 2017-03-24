@@ -53,6 +53,53 @@ Day.findAll({
 
 ## defaultScope
 
+```js
+...
+var Activity = db.define('activity', {
+  name: Sequelize.STRING,
+  age_range: Sequelize.STRING
+}, {
+  defaultScope: {
+    include: [Place]
+  },
+  getterMethods: {
+    type: function () {
+      return 'activity'
+    }
+  }
+});
+...
+```
+
+The default scope are rules / options to apply to queries *by default*.
+
+So now: `Activity.findAll()` will automatically eagerly load `Place`.
+
 ## full stack trace
 
+What happens when a user clicks the plus button next to the restaurants dropdown?
+
+1. Click event fires in browser, click handlers run
+2. We have click handler (over in line 44 of public/js/options.js)
+3. Get restaurant id from DOM
+4. Find the restaurant given the id
+5. Attaches a restaurant to the frontend day object
+6. Make AJAX call `PUT /api/days/someDayIdHere/restaurants` with that restaurant id in the request body
+7. THE WHOLE DANG INTERNET
+8. The server receives the request
+9. Run through all the app middleware (logging, body parsing, static file serving)
+10. Match router on backend for the given request (over on line 76 of routes/api/day.js)
+11. Execute database query based on calling `req.day.addRestaurant()` with the given id from the request body
+12. Data comes back from that query (assuming success), the server forms and sends a response containing that data
+13. THE WHOLE DANG INTERNET (AGAIN)
+14. Get a response from our server, on success (assumed) display attraction on DOM using `attraction.show()`
+...
+15. User sees new restaurant in itinerary list
+
+See here for something outrageously specific: https://github.com/alex/what-happens-when.
+
 ## good strategy getting up to speed in a new codebase
+
+See above. Do that exercise! Depth first!
+
+Read comments, READMEs, ask the developers, ritual sacrifice.
