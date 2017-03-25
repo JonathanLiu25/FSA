@@ -176,3 +176,10 @@
 - [Immutable Data Structures Review](https://youtu.be/zBnGh8oGlow)
 - [Git Internals Lecture](https://youtu.be/RLlmSJwImeo)
 - [Git Internals Review](https://youtu.be/uJmaTBSqUb0)
+
+### Scriptography
+
+- [Lecture: Randomness and Hashing](https://youtu.be/snhzxZc7idw)
+- [Review: Parts I and II](https://youtu.be/KfWhtiLjiCU)
+- [Lecture: Encryption](https://youtu.be/3f-rFaGtNtQ)
+- [Review: Parts III and IV](https://youtu.be/qibS5az2fFQ)
