@@ -21,4 +21,22 @@ random.base64 = function (length) {
   return str;
 };
 
+random.middleSquare = {};
+
+random.middleSquare.calculateNext = function (current) {
+  const size = current.length;
+  const squared = (current * current).toString();
+  const start = (squared.length - size) / 2
+  const middlePart = squared.substr(start, size);
+  if (middlePart.length < size) {
+    return '0'.repeat(size - middlePart.length) + middlePart;
+  } else {
+    return middlePart;
+  }
+};
+
+random.middleSquare.createGenerator = function (seed) {
+  return () => seed = this.calculateNext(seed);
+};
+
 module.exports = random;

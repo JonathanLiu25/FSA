@@ -91,11 +91,11 @@ describe('* PART I: random stuff, literally *', function () {
 
     // Make your own PSRNG using the middle-square method: https://en.wikipedia.org/wiki/Middle-square_method.
 
-    xit('`random.middleSquare` is an object', function () {
+    it('`random.middleSquare` is an object', function () {
       expect(random.middleSquare).to.be.an('object');
     });
 
-    xit('`random.middleSquare.createGenerator` is a function that takes a seed (a string of decimal digits) and returns a random number generator (a function)', function () {
+    it('`random.middleSquare.createGenerator` is a function that takes a seed (a string of decimal digits) and returns a random number generator (a function)', function () {
       expect(random.middleSquare.createGenerator).to.be.a('function');
       const prng = random.middleSquare.createGenerator('10');
       expect(prng).to.be.a('function');
@@ -103,13 +103,13 @@ describe('* PART I: random stuff, literally *', function () {
 
     describe('random number generator', function () {
 
-      xit('accepts no arguments and returns a string (of decimal digits)', function () {
+      it('accepts no arguments and returns a string (of decimal digits)', function () {
         const prng = random.middleSquare.createGenerator('32');
         const result = prng();
         expect(result).to.be.a('string');
       });
 
-      xit('outputs a string that is always the same length as the seed', function () {
+      it('outputs a string that is always the same length as the seed', function () {
         for (let i = 1; i < 10; i++) {
           const seed = '9'.repeat(i);
           const prng = random.middleSquare.createGenerator(seed);
@@ -118,14 +118,14 @@ describe('* PART I: random stuff, literally *', function () {
         }
       });
 
-      xit('outputs the middle digits of its seed squared', function () {
+      it('outputs the middle digits of its seed squared', function () {
         const prng = random.middleSquare.createGenerator('32');
         // 32 squared is 1024, the middle two digits are 02
         const num = prng();
         expect(num).to.equal('02');
       });
 
-      xit('uses the previous output as the next seed', function () {
+      it('uses the previous output as the next seed', function () {
         const prng = random.middleSquare.createGenerator('42');
         // 42 squared is 1764, the middle two digits are 76
         prng();
@@ -143,14 +143,14 @@ describe('* PART I: random stuff, literally *', function () {
         expect(fifth).to.equal('11');
       });
 
-      xit('can pad left zeroes as needed to maintain the seed size', function () {
+      it('can pad left zeroes as needed to maintain the seed size', function () {
         const prng = random.middleSquare.createGenerator('03');
         // 3 squared is 9, the middle two digits are 09
         const num = prng();
         expect(num).to.equal('09');
       });
 
-      xit('can deal with odd digit lengths', function () {
+      it('can deal with odd digit lengths', function () {
         const prng = random.middleSquare.createGenerator('15');
         // 15 squared is 225, the middle two digits are 22 or 25
         const num = prng();
