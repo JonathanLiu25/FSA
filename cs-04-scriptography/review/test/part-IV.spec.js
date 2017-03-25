@@ -13,20 +13,20 @@ describe('* PART IV: going public *', function () {
 
   describe('`RSA._selectKeyPair`', function () {
 
-    xit('utilizes `utils.totient`', function () {
+    it('utilizes `utils.totient`', function () {
       expect(RSA._selectKeyPair).to.be.a('function');
       chai.spy.on(utils, 'totient');
       RSA._selectKeyPair(11, 17);
       expect(utils.totient).to.have.been.called();
     });
 
-    xit('returns a pair of integers', function () {
+    it('returns a pair of integers', function () {
       const pair = RSA._selectKeyPair(11, 17);
       expect(Number.isInteger(pair[0])).to.equal(true);
       expect(Number.isInteger(pair[1])).to.equal(true);
     });
 
-    xit('given two primes that multiply to n, returns a valid numerical pair (e, d) that satisfies [ xᵉᵈ % n = x ] for any x', function () {
+    it('given two primes that multiply to n, returns a valid numerical pair (e, d) that satisfies [ xᵉᵈ % n = x ] for any x', function () {
       const pair = RSA._selectKeyPair(11, 17);
       const phiN = utils.totient(187, [11, 17]);
       expect(pair[0] * pair[1] % phiN).to.equal(1);
@@ -36,20 +36,20 @@ describe('* PART IV: going public *', function () {
 
   describe('`RSA.generateKeys`', function () {
 
-    xit('utilizes `RSA._selectKeyPair`', function () {
+    it('utilizes `RSA._selectKeyPair`', function () {
       expect(RSA.generateKeys).to.be.a('function');
       chai.spy.on(RSA, '_selectKeyPair');
       RSA.generateKeys(11, 17);
       expect(RSA._selectKeyPair).to.have.been.called();
     });
 
-    xit('given the seed of two primes, comes back with a public key and private key', function () {
+    it('given the seed of two primes, comes back with a public key and private key', function () {
       const keys = RSA.generateKeys(11, 17);
       expect(keys.public).to.be.a('string');
       expect(keys.private).to.be.a('string');
     });
 
-    xit('each key is in turn composed of two parts, the variable part used for exponentiation and the constant part used as the modulus', function () {
+    it('each key is in turn composed of two parts, the variable part used for exponentiation and the constant part used as the modulus', function () {
       const keys = RSA.generateKeys(11, 17);
       const publicPieces = keys.public.split(':');
       const privatePieces = keys.private.split(':');
@@ -57,7 +57,7 @@ describe('* PART IV: going public *', function () {
       expect(publicPieces[1]).to.not.equal(privatePieces[1]);
     });
 
-    xit('the constant part of either key is calculated by multiplying the two given primes', function () {
+    it('the constant part of either key is calculated by multiplying the two given primes', function () {
       const keys = RSA.generateKeys(11, 17);
       const publicConstant = keys.public.split(':')[0];
       const privateConstant = keys.private.split(':')[0];
@@ -65,7 +65,7 @@ describe('* PART IV: going public *', function () {
       expect(parseInt(privateConstant)).to.equal(187);
     });
 
-    xit('the variable part of the public key corresponds to the smaller selected exponent', function () {
+    it('the variable part of the public key corresponds to the smaller selected exponent', function () {
       const keys = RSA.generateKeys(11, 17);
       const publicVariable = keys.public.split(':')[1];
       const privateVariable = keys.private.split(':')[1];
@@ -76,7 +76,7 @@ describe('* PART IV: going public *', function () {
 
   describe('`RSA.encrypt`', function () {
 
-    xit('given a key and ASCII plaintext returns base64 ciphertext of the same *byte size*', function () {
+    it('given a key and ASCII plaintext returns base64 ciphertext of the same *byte size*', function () {
       expect(RSA.encrypt).to.be.a('function');
       const keys = RSA.generateKeys(11, 17);
       // encryption using the public key
@@ -89,7 +89,7 @@ describe('* PART IV: going public *', function () {
       expect(utils.base64ToAscii(ciphertext2)).to.have.length(19);
     });
 
-    xit('calculates ciphertext using modular exponentiation', function () {
+    it('calculates ciphertext using modular exponentiation', function () {
       const keys = RSA.generateKeys(11, 17);
       chai.spy.on(utils, 'modularExponentiation');
       RSA.encrypt(keys.public, 'It does not really matter what this text is');
@@ -100,7 +100,7 @@ describe('* PART IV: going public *', function () {
 
   describe('`RSA.decrypt`', function () {
 
-    xit('given a key and some base64 ciphertext returns ASCII plaintext of the same *byte size*', function () {
+    it('given a key and some base64 ciphertext returns ASCII plaintext of the same *byte size*', function () {
       expect(RSA.encrypt).to.be.a('function');
       const keys = RSA.generateKeys(11, 17);
       // decryption using the private key
@@ -113,7 +113,7 @@ describe('* PART IV: going public *', function () {
       expect(utils.asciiToBase64(plaintext2)).to.have.length(38);
     });
 
-    xit('calculates plaintext using modular exponentiation', function () {
+    it('calculates plaintext using modular exponentiation', function () {
       const keys = RSA.generateKeys(11, 17);
       chai.spy.on(utils, 'modularExponentiation');
       RSA.decrypt(keys.private, 'It does not really matter what this text is');
@@ -129,14 +129,14 @@ describe('* PART IV: going public *', function () {
       keys = RSA.generateKeys(11, 17);
     });
 
-    xit('only the private key can be used to decrypt messages encrypted with the public key', function () {
+    it('only the private key can be used to decrypt messages encrypted with the public key', function () {
       const plaintext = 'A secret...clearly';
       const ciphertext = RSA.encrypt(keys.public, plaintext);
       expect(RSA.decrypt(keys.private, ciphertext)).to.equal(plaintext);
       expect(RSA.decrypt(keys.public, ciphertext)).to.not.equal(plaintext);
     });
 
-    xit('only the public key can be used to decrypt messages encrypted with the private key', function () {
+    it('only the public key can be used to decrypt messages encrypted with the private key', function () {
       const plaintext = 'Dog\'s barking, can\'t fly without umbrella';
       const ciphertext = RSA.encrypt(keys.private, plaintext);
       expect(RSA.decrypt(keys.public, ciphertext)).to.equal(plaintext);

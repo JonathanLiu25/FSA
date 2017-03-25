@@ -18,13 +18,13 @@ describe('* PART III: encyrption conniption *', function () {
         Math.random = originalMathRandom;
       });
 
-      xit('is different each time', function () {
+      it('is different each time', function () {
         expect(CSC.generateKey).to.be.a('function');
         // technically this assertion will very infrequently fail even if you do everything correctly
         expect(CSC.generateKey()).to.not.equal(CSC.generateKey());
       });
 
-      xit('generates a random integer from 1 to 4095 (one less than the size of our ASCII alphabet)', function () {
+      it('generates a random integer from 1 to 4095 (one less than the size of our ASCII alphabet)', function () {
         chai.spy.on(random, 'integer');
         expect(CSC.generateKey()).to.be.a('number');
         expect(random.integer).to.have.been.called();
@@ -42,14 +42,14 @@ describe('* PART III: encyrption conniption *', function () {
 
     describe('`CSC.encrypt`', function () {
 
-      xit('given a key and ASCII plaintext returns base64 ciphertext of the same *byte size*', function () {
+      it('given a key and ASCII plaintext returns base64 ciphertext of the same *byte size*', function () {
         expect(CSC.encrypt).to.be.a('function');
         const ciphertext = CSC.encrypt(300, 'how now brown cow?');
         expect(ciphertext).to.be.a('string');
         expect(utils.base64ToAscii(ciphertext)).to.have.length(18);
       });
 
-      xit('offsets the resulting ciphertext by the key', function () {
+      it('offsets the resulting ciphertext by the key', function () {
         // HINT: make sure to shift the original ASCII text *before* converting to base64
         const ciphertext1 = CSC.encrypt(1, 'aAxfoo');
         expect(utils.base64ToAscii(ciphertext1)).to.equal('bBygpp');
@@ -61,7 +61,7 @@ describe('* PART III: encyrption conniption *', function () {
 
     describe('`CSC.decrypt`', function () {
 
-      xit('given a key and some base64 ciphertext returns ASCII plaintext of the same *byte size*', function () {
+      it('given a key and some base64 ciphertext returns ASCII plaintext of the same *byte size*', function () {
         expect(CSC.decrypt).to.be.a('function');
         const ciphertext = utils.asciiToBase64('the quick brown fox jumps over the lazy dog');
         const plaintext = CSC.decrypt(158, ciphertext);
@@ -69,7 +69,7 @@ describe('* PART III: encyrption conniption *', function () {
         expect(plaintext).to.have.length(43);
       });
 
-      xit('de-offsets the resulting plaintext by the key', function () {
+      it('de-offsets the resulting plaintext by the key', function () {
         const ciphertext1 = utils.asciiToBase64('mellow');
         const plaintext1 = CSC.decrypt(1, ciphertext1);
         expect(plaintext1).to.equal('ldkknv');
@@ -82,13 +82,13 @@ describe('* PART III: encyrption conniption *', function () {
 
     describe('is symmetric', function () {
 
-      xit('decrypt comes back with what encrypt started with', function () {
+      it('decrypt comes back with what encrypt started with', function () {
         const original = 'This is incredible right?';
         const cloned = CSC.decrypt(589, CSC.encrypt(589, original));
         expect(cloned).to.equal(original);
       });
 
-      xit('fails to decrypt with the wrong key', function () {
+      it('fails to decrypt with the wrong key', function () {
         const original = 'How about that?';
         const cloned = CSC.decrypt(123, CSC.encrypt(456, original));
         expect(cloned).to.not.equal(original);
@@ -102,12 +102,12 @@ describe('* PART III: encyrption conniption *', function () {
 
     describe('`OTP.generateKey`', function () {
 
-      xit('is different each time', function () {
+      it('is different each time', function () {
         expect(OTP.generateKey).to.be.a('function');
         expect(OTP.generateKey(16)).to.not.equal(OTP.generateKey(16));
       });
 
-      xit('produces a random base64 string of the given length', function () {
+      it('produces a random base64 string of the given length', function () {
         chai.spy.on(random, 'base64');
         const key = OTP.generateKey(4);
         expect(random.base64).to.have.been.called();
@@ -125,7 +125,7 @@ describe('* PART III: encyrption conniption *', function () {
         key = 'bBM4byLnS7yTy6Vwhl578dAulQ7wrss3RtUJhzIR_xqnuPGOxOlzLdWfMmS1d2xb';
       });
 
-      xit('given a key and ASCII plaintext returns base64 ciphertext of the same *byte size*', function () {
+      it('given a key and ASCII plaintext returns base64 ciphertext of the same *byte size*', function () {
         expect(OTP.encrypt).to.be.a('function');
         // NOTE: the key might be larger than the plaintext, simply don't use the whole key
         const ciphertext = OTP.encrypt(key, 'Message in a bottle');
@@ -133,7 +133,7 @@ describe('* PART III: encyrption conniption *', function () {
         expect(utils.base64ToAscii(ciphertext)).to.have.length(19);
       });
 
-      xit('uses XOR to produce a noisy result', function () {
+      it('uses XOR to produce a noisy result', function () {
         const plaintext = 'A humorous but secret message';
         const ciphertext = OTP.encrypt(utils.asciiToBase64(plaintext), plaintext);
         expect(ciphertext).to.be.a('string');
@@ -155,7 +155,7 @@ describe('* PART III: encyrption conniption *', function () {
         key = 'bBM4byLnS7yTy6Vwhl578dAulQ7wrss3RtUJhzIR_xqnuPGOxOlzLdWfMmS1d2xb';
       });
 
-      xit('given a key and some base64 ciphertext returns ASCII plaintext of the same *byte size*', function () {
+      it('given a key and some base64 ciphertext returns ASCII plaintext of the same *byte size*', function () {
         expect(OTP.decrypt).to.be.a('function');
         // NOTE: the key might be larger than the ciphertext, simply don't use the whole key
         const plaintext = OTP.decrypt(key, 'mAd5Yzwmn6$S97pwUkx6Cd7vRQzx_tM2FscIIy');
@@ -163,7 +163,7 @@ describe('* PART III: encyrption conniption *', function () {
         expect(utils.asciiToBase64(plaintext)).to.have.length(38);
       });
 
-      xit('uses XOR to unscramble the ciphertext', function () {
+      it('uses XOR to unscramble the ciphertext', function () {
         const ciphertext = '1u32f1kjf';
         const plaintext = OTP.decrypt(ciphertext, ciphertext);
         expect(plaintext).to.be.a('string');
@@ -178,14 +178,14 @@ describe('* PART III: encyrption conniption *', function () {
 
     describe('is symmetric', function () {
 
-      xit('decrypt comes back with what encrypt started with', function () {
+      it('decrypt comes back with what encrypt started with', function () {
         const key = OTP.generateKey(16);
         const original = 'Secretly';
         const cloned = OTP.decrypt(key, OTP.encrypt(key, original));
         expect(original).to.equal(cloned);
       });
 
-      xit('fails to decrypt with the wrong key', function () {
+      it('fails to decrypt with the wrong key', function () {
         const encryptionKey = OTP.generateKey(16);
         const wrongKey = OTP.generateKey(16);
         const original = 'Secretly';
