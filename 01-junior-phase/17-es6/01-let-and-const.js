@@ -7,12 +7,12 @@
 // ======================================================== 
 // var is function scoped, let and const are block scoped
 // ========================================================
-function setName(){
-	var name = 'Dumbledore'
-	console.log(name)
+function setAge(){
+	var age = 123
+	console.log(age)
 }
 
-console.log(name) // => ReferenceError because name is scoped to the function
+console.log(age) // => ReferenceError because name is scoped to the function
 
 
 var age = 55
@@ -95,7 +95,22 @@ for(let i = 0; i < 5; i++){
 }
 
 
-// bonus - const and let are not hoisted...
+// Another example:
+function arrayOfFuncs(n) {
+    var functions = [];
 
+    /*  because using "let" to declare the variable "i" makes it block-scoped,
+        you don't have to worry about closing it over    */
+    for (var i = 0; i < n; i++) {
+        functions.push(function () {
+            return i;
+        });
+    }
+    return functions;
+}
+
+const myFunctions = arrayOfFunctions(5)
+
+// bonus - const and let are not hoisted...
 
 

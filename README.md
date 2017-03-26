@@ -143,6 +143,16 @@
 - [Live Review: Trip Planner Persistence](https://youtu.be/UqZNu3nCSks)
 - [Q & A: Trip Planner Persistence](https://youtu.be/f0R0sdZVjl8)
 
+### World Wide Whiteboard (Websockets/Socket.io)
+
+* [Lecture](https://youtu.be/Hys6xzBvSXo) - live recording failed, this is a recording from a previous cohort
+* [Review](https://www.youtube.com/watch?v=bSS9lzP8Si8)
+
+### ES6
+
+- [Lecture](https://youtu.be/_WxXZQvMepI) - from a previous cohort
+
+
 ---
 
 ## Checkpoints

@@ -1,8 +1,9 @@
+
 // much more concise, 
 // implicit returns, 
 // doesn't rebind value of this
 
-function add(a,b){
+var add = function(a,b){
 	return a + b
 }
 
@@ -12,13 +13,11 @@ const add = (a,b) => {
 // we can make it more concise
 
 // let's do it again with this double function
-function double(x){
+var double = function(x){
 	return x*2
 }
 
-const double = (x) => {
-	return x*2
-}
+const double = x => x*2
 
 
 const films = [
@@ -37,9 +36,7 @@ films.map(function(film){
 })
 
 // we can do it more concisely with arrow functions:
-films.map((film) => {
-	return `<li>${film}</li>`
-})
+films.map(film => `<li>${film}</li>`)
 
 // two more things to make it even better
 // 1 - remove parens (if only one parameter)
@@ -59,9 +56,8 @@ films.map((film, i) => {filmName: film, index: i})
 // (which is great for nested methods, as we don't have to 'bind' anymore)
 
 
-
 // TAKEAWAYS
-// Use function for named functions and for Object.prototype properties.
+// Use 'function' for functions in global scope, and for Object.prototype properties, 
 // Use class for object constructors (we'll come to this soon)
 // Use => everywhere else.
 
