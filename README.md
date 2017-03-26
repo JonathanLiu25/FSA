@@ -141,7 +141,7 @@
 - [Lecture: AJAX](https://youtu.be/k1UnJPRbcKA)
 - [Recorded Review: Trip Planner Persistence](https://youtu.be/DeFD0EuG4dY)
 - [Live Review: Trip Planner Persistence](https://youtu.be/UqZNu3nCSks)
-- [Q & A: Trip Planner Persistence](https://youtu.be/f0R0sdZVjl8)
+- [Q & A: Trip Planner Persistence](https://youtu.be/f0R0sdZVjl8) and [Overflow](https://youtu.be/-5u3nzXL9Os)
 
 ### World Wide Whiteboard (Websockets/Socket.io)
 
@@ -186,3 +186,10 @@
 - [Immutable Data Structures Review](https://youtu.be/zBnGh8oGlow)
 - [Git Internals Lecture](https://youtu.be/RLlmSJwImeo)
 - [Git Internals Review](https://youtu.be/uJmaTBSqUb0)
+
+### Scriptography
+
+- [Lecture: Randomness and Hashing](https://youtu.be/snhzxZc7idw)
+- [Review: Parts I and II](https://youtu.be/KfWhtiLjiCU)
+- [Lecture: Encryption](https://youtu.be/3f-rFaGtNtQ)
+- [Review: Parts III and IV](https://youtu.be/qibS5az2fFQ)
