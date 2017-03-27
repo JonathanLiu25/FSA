@@ -151,6 +151,7 @@
 ### ES6
 
 - [Lecture](https://youtu.be/_WxXZQvMepI) - from a previous cohort
+- [Review](https://www.youtube.com/watch?v=4gg7fR7PlZ4)
 
 
 ---
