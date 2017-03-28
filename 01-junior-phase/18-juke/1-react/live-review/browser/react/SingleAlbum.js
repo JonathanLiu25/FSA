@@ -7,7 +7,7 @@ function SingleAlbum (props) {
     );
   }
   return (
-    <div className="album">
+    <div className="album col-xs-10">
       <div>
         <h3>{props.album.name}</h3>
         <img src={`/api/albums/${props.album.id}/image`} className="img-thumbnail" />
@@ -24,7 +24,7 @@ function SingleAlbum (props) {
         <tbody>
           {props.album.songs.map(function (song) {
             return (
-              <tr>
+              <tr key={song.id}>
                 <td>
                   <button className="btn btn-default btn-xs">
                     <span className="glyphicon glyphicon-play"></span>
