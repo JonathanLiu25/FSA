@@ -18,7 +18,6 @@ class Main extends React.Component {
   componentDidMount () {
     axios.get('/api/albums')
     .then(response => {
-      console.trace();
       const allAlbumsData = response.data;
       // set the state, trigger re-render
       this.setState({
@@ -35,7 +34,6 @@ class Main extends React.Component {
     });
   }
   render () {
-    console.log(this);
     const allAlbumsOrJustOneWhoKnows = this.state.selectedAlbum.id ?
       <SingleAlbum album={this.state.selectedAlbum} />
       :
