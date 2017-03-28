@@ -158,6 +158,7 @@
 - [Lecture: Intro to React](https://youtu.be/LGnZbAsewmY)
 - Review Juke 1. React: [Part I](https://youtu.be/uFZfEqbfYds) and [Part II](https://youtu.be/fFdKXsnM0Es)
 
+- [Lecture: React Router](https://youtu.be/EkPNo1Ky400)
 ---
 
 ## Checkpoints
