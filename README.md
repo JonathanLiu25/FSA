@@ -153,6 +153,10 @@
 - [Lecture](https://youtu.be/_WxXZQvMepI) - from a previous cohort
 - [Review](https://www.youtube.com/watch?v=4gg7fR7PlZ4)
 
+### Juke
+
+- [Lecture: Intro to React](https://youtu.be/LGnZbAsewmY)
+- Review Juke 1. React: [Part I](https://youtu.be/uFZfEqbfYds) and [Part II](https://youtu.be/fFdKXsnM0Es)
 
 ---
 
