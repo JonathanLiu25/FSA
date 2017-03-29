@@ -19,6 +19,17 @@ app.use(express.static(__dirname));
 let incrementingId = 1;
 const diaryEntries = [];
 
+let currentEntry = {};
+
+app.get('/api/diary/current', function (req, res) {
+  res.json(currentEntry);
+});
+
+app.put('/api/diary/current', function (req, res) {
+  currentEntry = req.body;
+  res.status(204).end();
+});
+
 // all entries
 app.get('/api/diary', function (req, res, next) {
   res.json(diaryEntries);
