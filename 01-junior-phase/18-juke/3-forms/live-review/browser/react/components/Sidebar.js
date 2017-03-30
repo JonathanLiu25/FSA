@@ -16,6 +16,25 @@ const Sidebar = (props) => {
           <Link to='/artists'>ARTISTS</Link>
         </h4>
       </section>
+      <hr />
+      <section>
+        <h4 className="text-muted">PLAYLISTS</h4>
+        <p className="menu-item">
+          <Link to="FILL_ME_IN">
+            (some playlist)
+          </Link>
+        </p>
+        <p className="menu-item">
+          <Link to="FILL_ME_IN">
+            (another playlist)
+          </Link>
+        </p>
+        <h4>
+          <Link className="btn btn-primary btn-block" to='SOMETHING_GOES_HERE'>
+            <span className="glyphicon glyphicon-plus"></span> PLAYLIST
+          </Link>
+        </h4>
+      </section>
     </sidebar>
   );
 }
