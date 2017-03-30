@@ -30,7 +30,9 @@ const Sidebar = (props) => {
           </Link>
         </p>
         <h4>
-          <Link className="btn btn-primary btn-block" to='SOMETHING_GOES_HERE'>
+          <Link
+            className="btn btn-primary btn-block"
+            to='/playlists/new'>
             <span className="glyphicon glyphicon-plus"></span> PLAYLIST
           </Link>
         </h4>

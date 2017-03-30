@@ -126,7 +126,7 @@ export default class AppContainer extends Component {
 
   render () {
 
-    const props = Object.assign({}, this.state, {
+    const propsForChild = Object.assign({}, this.state, {
       toggleOne: this.toggleOne,
       toggle: this.toggle,
       selectAlbum: this.selectAlbum,
@@ -140,7 +140,7 @@ export default class AppContainer extends Component {
         </div>
         <div className="col-xs-10">
         {
-          this.props.children && React.cloneElement(this.props.children, props)
+          this.props.children && React.cloneElement(this.props.children, propsForChild)
         }
         </div>
         <Player
