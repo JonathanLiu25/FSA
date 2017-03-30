@@ -157,8 +157,10 @@
 
 - [Lecture: Intro to React](https://youtu.be/LGnZbAsewmY)
 - Review Juke 1. React: [Part I](https://youtu.be/uFZfEqbfYds) and [Part II](https://youtu.be/fFdKXsnM0Es)
-
 - [Lecture: React Router](https://youtu.be/EkPNo1Ky400)
+- [Lecture: React Forms](https://youtu.be/mcaicu-Mg0c)
+- [Q & A: Starting Point of Juke 3. Forms](https://youtu.be/uAjhEt9aI8Y)
+
 ---
 
 ## Checkpoints
