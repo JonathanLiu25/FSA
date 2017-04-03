@@ -1,5 +1,14 @@
 import axios from 'axios';
 import React from 'react';
+import {Provider, connect} from 'react-redux';
+
+import ourStore from './store';
+import {
+  changeTitle,
+  changeColor,
+  changeText,
+  retrieveEntries
+} from './actions';
 
 function AllDiaries (props) {
   return (
@@ -49,42 +58,42 @@ function DiaryForm (props) {
   );
 }
 
-// "container" component
-class Main extends React.Component {
-  constructor () {
-    super();
-    this.state = {
-      inputTitle: '',
-      inputColor: '',
-      inputEntryText: '',
-      allEntries: []
-    };
-  }
+// // "container" component
+// class DiaryApp extends React.Component {
+//   componentDidMount () {
+//     axios.get('/api/diary')
+//     .then(response => {
+//       return response.data;
+//     })
+//     .then(data => {
+//       this.setState({
+//         allEntries: data
+//       });
+//     });
+//     axios.get('/api/diary/current')
+//     .then(response => {
+//       this.setState({
+//         inputTitle: response.data.title,
+//         inputColor: response.data.color,
+//         inputEntryText: response.data.text
+//       });
+//     });
+//   }
+//   saveCurrent () {
+//     axios.put('/api/diary/current', {
+//       title: this.state.inputTitle,
+//       color: this.state.inputColor,
+//       text: this.state.inputEntryText
+//     });
+//   }
+//   render () {
+//     return ;
+//   }
+// }
+
+class DiaryAppPresentational extends React.Component {
   componentDidMount () {
-    axios.get('/api/diary')
-    .then(response => {
-      return response.data;
-    })
-    .then(data => {
-      this.setState({
-        allEntries: data
-      });
-    });
-    axios.get('/api/diary/current')
-    .then(response => {
-      this.setState({
-        inputTitle: response.data.title,
-        inputColor: response.data.color,
-        inputEntryText: response.data.text
-      });
-    });
-  }
-  saveCurrent () {
-    axios.put('/api/diary/current', {
-      title: this.state.inputTitle,
-      color: this.state.inputColor,
-      text: this.state.inputEntryText
-    });
+    this.props.retrieveEntries();
   }
   render () {
     return (
@@ -92,43 +101,71 @@ class Main extends React.Component {
         <h3>Dear diary...</h3>
         <hr />
         <DiaryForm
-          inputTitle={this.state.inputTitle}
-          inputColor={this.state.inputColor}
-          inputEntryText={this.state.inputEntryText}
-          changeTitle={newTitle => {
-            this.setState({
-              inputTitle: newTitle
-            });
-            this.saveCurrent();
-          }}
-          changeColor={newColor => {
-            this.setState({
-              inputColor: newColor
-            });
-            this.saveCurrent();
-          }}
-          changeText={newEntryText => {
-            this.setState({
-              inputEntryText: newEntryText
-            });
-            this.saveCurrent();
-          }}
-          submit={() => {
-            axios.post('/api/diary', {
-              title: this.state.inputTitle,
-              color: this.state.inputColor,
-              text: this.state.inputEntryText
-            })
-            .then(function (response) {
-              console.log(response.data);
-            });
-          }}
+          inputTitle={this.props.inputTitle}
+          inputColor={this.props.inputColor}
+          inputEntryText={this.props.inputEntryText}
+          changeTitle={this.props.changeTitle}
+          changeColor={this.props.changeColor}
+          changeText={this.props.changeText}
+          submit={() => {}}
         />
         <hr />
-        <AllDiaries entries={this.state.allEntries} />
+        <AllDiaries entries={this.props.allEntries} />
       </div>
     );
   }
+}
+
+function mapStateToProps (storeState) {
+  return {
+    inputTitle: storeState.inputTitle,
+    inputColor: storeState.inputColor,
+    inputEntryText: storeState.inputEntryText,
+    allEntries: storeState.allEntries
+  };
+}
+
+function mapDispatchToProps (dispatch) {
+  return {
+    changeTitle: function (newTitle) {
+      dispatch(changeTitle(newTitle));
+    },
+    changeColor: function (color) {
+      dispatch(changeColor(color));
+    },
+    changeText: function (text) {
+      dispatch(changeText(text));
+    },
+    retrieveEntries: function () {
+      dispatch(retrieveEntries());
+    }
+  };
+}
+
+// // alternative format, more succinct
+// // all methods must conform to:
+// // fuction (arg) {dispatch(actionCreator(arg))}
+// const mapDispatchToProps = {
+//   changeTitle,
+//   changeColor,
+//   changeText,
+//   retrieveEntries
+// };
+
+// "connect"ed (to the store) component
+const DiaryAppContainer = connect(
+  // data the presentational component needs
+  mapStateToProps,
+  // methods that the presentational component needs
+  mapDispatchToProps
+)(DiaryAppLocalContainer);
+
+function Main () {
+  return (
+    <Provider store={ourStore}>
+      <DiaryAppContainer />
+    </Provider>
+  );
 }
 
 export default Main;
