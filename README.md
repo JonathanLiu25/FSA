@@ -160,6 +160,8 @@
 - [Lecture: React Router](https://youtu.be/EkPNo1Ky400)
 - [Lecture: React Forms](https://youtu.be/mcaicu-Mg0c)
 - [Q & A: Starting Point of Juke 3. Forms](https://youtu.be/uAjhEt9aI8Y)
+- [Review: Juke 3. Forms](https://youtu.be/F4uPv0-Yeps)
+- [Lecture: React-Redux](https://youtu.be/EeoZA6gZG3A)
 
 ---
 
