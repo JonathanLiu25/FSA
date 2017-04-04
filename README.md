@@ -162,6 +162,11 @@
 - [Q & A: Starting Point of Juke 3. Forms](https://youtu.be/uAjhEt9aI8Y)
 - [Review: Juke 3. Forms](https://youtu.be/F4uPv0-Yeps)
 - [Lecture: React-Redux](https://youtu.be/EeoZA6gZG3A)
+- [Review: React-Redux](https://youtu.be/Gnk_9oTiLLw)
+
+### Auther
+
+- [Lecture: Authentication Data Flow](https://youtu.be/lncjAEE1itU)
 
 ---
 
