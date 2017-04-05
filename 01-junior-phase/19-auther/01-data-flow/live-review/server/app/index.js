@@ -2,6 +2,7 @@
 
 var app = require('express')();
 var path = require('path');
+var expressSession = require('express-session');
 
 // "Enhancing" middleware (does not send response, server-side effects only)
 
@@ -9,6 +10,15 @@ app.use(require('./logging.middleware'));
 
 app.use(require('./body-parsing.middleware'));
 
+// this will establish `req.session` object
+// that session object only present on server
+// contains data/state that we want to persist about a client (not user)
+// usable downstream of this middlware
+app.use(expressSession({
+  secret: 'tongiscool',
+  resave: false,
+  saveUnitialized: false
+}));
 
 // "Responding" middleware (may send a response back to client)
 
