@@ -168,6 +168,7 @@
 ### Auther
 
 - [Lecture: Authentication Data Flow](https://youtu.be/lncjAEE1itU)
+- [Live Review: Auther 1. Authentication Data Flow](https://youtu.be/d0mLCg-YHY4)
 
 ---
 
