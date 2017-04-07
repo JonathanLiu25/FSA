@@ -186,6 +186,10 @@
 - [Review: Express / Sequelize Checkpoint](https://youtu.be/MGk2tineSxc)
 - [Q & A: Express / Sequelize Checkpoint](https://youtu.be/U0580hW7qck)
 
+### Review Checkpoints
+
+- [Q & A: Review Checkpoints](https://youtu.be/QE5sCz-te5Q)
+
 ---
 
 ## CS Saturday
