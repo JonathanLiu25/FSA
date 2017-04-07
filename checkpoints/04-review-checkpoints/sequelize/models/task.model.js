@@ -68,7 +68,7 @@ var Task = db.define('Task', {
 
   hooks: {
     beforeDestroy: function (task) {
-      return this.destroy({
+      return this.destroy({ // bulk destroy
         where: {parentId: task.id},
         individualHooks: true // not tested in the spec, but a logical choice here
       });
