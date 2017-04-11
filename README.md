@@ -214,3 +214,8 @@
 - [Review: Parts I and II](https://youtu.be/KfWhtiLjiCU)
 - [Lecture: Encryption](https://youtu.be/3f-rFaGtNtQ)
 - [Review: Parts III and IV](https://youtu.be/qibS5az2fFQ)
+
+### Machine Learning
+
+- [Review: Minimax](https://youtu.be/3AgjsZPw720)
+- [Lecture](https://youtu.be/aMHfT2CqYrk)
