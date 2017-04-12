@@ -170,6 +170,10 @@
 - [Lecture: Authentication Data Flow](https://youtu.be/lncjAEE1itU)
 - [Live Review: Auther 1. Authentication Data Flow](https://youtu.be/d0mLCg-YHY4)
 
+### Curriculum Review
+
+- [Review Week Q & A](https://youtu.be/2qLhdUvzPB8)
+
 ---
 
 ## Checkpoints
