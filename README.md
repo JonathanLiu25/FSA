@@ -170,6 +170,14 @@
 - [Lecture: Authentication Data Flow](https://youtu.be/lncjAEE1itU)
 - [Live Review: Auther 1. Authentication Data Flow](https://youtu.be/d0mLCg-YHY4)
 
+### Web Security (Defense Against the Dark Arts)
+
+- Uncovering Secrets: [lecture (from last time)](https://youtu.be/YOP_Uk7mqUU), [attack review](https://youtu.be/ZnYGXfcUnDc), and [defense review](https://youtu.be/htd-vnxLDZc)
+- Access Control: [lecture (pending)](), [attack review (pending)](), and [defense review (pending)]()
+- Injection: [lecture](https://youtu.be/J__-iTIr7jk), [attack review](https://youtu.be/8BcbowYwwQo), and [defense review](https://youtu.be/UZgebLxQpgw)
+- XSS: [lecture](https://youtu.be/v-aMfvn_Z0o), [attack review](https://youtu.be/W5L-m7AgAsw), and [defense review](https://youtu.be/P0YCsSIDBfg)
+- Data Theft: [lecture (pending)](), [attack review (pending)](), and [defense review (pending)]()
+
 ### Curriculum Review
 
 - [Review Week Q & A](https://youtu.be/2qLhdUvzPB8)
