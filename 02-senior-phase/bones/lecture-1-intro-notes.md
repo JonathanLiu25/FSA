@@ -1,0 +1,14 @@
+- Team comes up with issue
+- Team assigns person or pair (**A**) to issue
+- **A** does `git checkout master`, does `git pull origin  master` to sync up, then does `git checkout -b the-name-of-the-feature-or-whatever`
+- **A** makes changes, continually does `git add -A` and `git commit -m "Useful message goes here"`, and ideally also `git push origin the-name-of-the-feature-or-whatever`
+  - Use "imperative mood": `update documentation about dinosaur skull stuff` as opposed to `updated the documentation about dinosaur skull stuff` ([more here](https://chris.beams.io/posts/git-commit/))
+  - Use a label upfront, here are some good ones: `fix`, `perf`, `refactor`, `style`, `test`, `feat`, `chore`, `docs` ([more here](https://seesparkbox.com/foundry/semantic_commit_messages))
+- Eventually **A** feels the code is ready
+- **A** `git checkout master` then `git pull origin master` then `git checkout the-name-of-the-feature-or-whatever` then `git merge master` to sync with existing code
+- Then **A** does `git push origin the-name-of-the-feature-or-whatever` and makes a Pull Request in github
+- Team / **A** assigns some other person / people (**B**) to review it
+- **B** makes comments, suggests changes
+- **A** whines about it, but makes the changes
+- Eventually, **B** approves and hits Merge Pull Request in github
+- The whole team should now do `git checkout master` then `git pull origin master`
