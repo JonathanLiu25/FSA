@@ -239,3 +239,4 @@
 ### Grace Shopper
 
 - [Lecture: Intro to Grace Shopper](https://youtu.be/ZvdGIoyImaQ)
+- [Lecture: Intro to Bones and Team Git Workflow](https://youtu.be/15DFLSwfjlQ)
