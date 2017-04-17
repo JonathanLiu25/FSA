@@ -241,3 +241,7 @@
 
 - [Lecture: Intro to Grace Shopper](https://youtu.be/ZvdGIoyImaQ)
 - [Lecture: Intro to Bones and Team Git Workflow](https://youtu.be/15DFLSwfjlQ)
+
+### Technical Interview Prep
+
+- [Lecture: Intro to REACTO](https://youtu.be/SFixtjaEL9E)
