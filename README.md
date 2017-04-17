@@ -231,3 +231,11 @@
 
 - [Review: Minimax](https://youtu.be/3AgjsZPw720)
 - [Lecture](https://youtu.be/aMHfT2CqYrk)
+
+---
+
+## Senior Phase
+
+### Grace Shopper
+
+- [Lecture: Intro to Grace Shopper](https://youtu.be/ZvdGIoyImaQ)
