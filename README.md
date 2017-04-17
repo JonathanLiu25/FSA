@@ -173,10 +173,11 @@
 ### Web Security (Defense Against the Dark Arts)
 
 - Uncovering Secrets: [lecture (from last time)](https://youtu.be/YOP_Uk7mqUU), [attack review](https://youtu.be/ZnYGXfcUnDc), and [defense review](https://youtu.be/htd-vnxLDZc)
-- Access Control: [lecture (pending)](), [attack review (pending)](), and [defense review (pending)]()
+- Access Control: [lecture](https://youtu.be/NJc5Cpmk5s4), [attack review](https://youtu.be/UzClD9o7FYk), and [defense review](https://youtu.be/CPaYtPgZAlQ)
 - Injection: [lecture](https://youtu.be/J__-iTIr7jk), [attack review](https://youtu.be/8BcbowYwwQo), and [defense review](https://youtu.be/UZgebLxQpgw)
 - XSS: [lecture](https://youtu.be/v-aMfvn_Z0o), [attack review](https://youtu.be/W5L-m7AgAsw), and [defense review](https://youtu.be/P0YCsSIDBfg)
-- Data Theft: [lecture (pending)](), [attack review (pending)](), and [defense review (pending)]()
+- Data Theft: [lecture](https://youtu.be/4TaCBwGSdcY), [attack review](https://youtu.be/HHaGeMXLJSo), and [defense review](https://youtu.be/fNzDtpLpCzQ)
+- [Closing Lecture](https://youtu.be/NhWSzzmXEds)
 
 ### Curriculum Review
 
