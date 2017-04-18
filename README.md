@@ -245,3 +245,4 @@
 ### Technical Interview Prep
 
 - [Lecture: Intro to REACTO](https://youtu.be/SFixtjaEL9E)
+- Lecture: Big O [Part I](https://youtu.be/ip1hCdMnTcA) and [Part II](https://youtu.be/j6aL8xoPhHE)
