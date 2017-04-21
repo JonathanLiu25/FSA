@@ -43,7 +43,7 @@ To deploy:
 
 ## Commands that are useful
 
-- `heroku logs ---tail` (in another terminal tab)
+- `heroku logs --tail` (in another terminal tab)
 - `heroku run bash`, which opens a shell into your remote server
 
 ## Hosting
