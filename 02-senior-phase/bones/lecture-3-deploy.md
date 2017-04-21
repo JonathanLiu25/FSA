@@ -52,3 +52,18 @@ To deploy:
 - Pointing it to your deployed server
 - The point: to have a named place for your app
 - [See more here](https://ryanboland.com/blog/completely-free-easy-to-setup-ssl/)
+
+## Continuous integration
+
+- Continually (i.e. daily) finish features that are tested / qaed / etc
+- Frequently complete code for features, test them, deploy them
+- CI tools often come with a tool to deploy your app
+
+## Codeship
+
+- Configure it with your github repo and it will run your tests for you automatically every time you push
+
+## Test coverage reporting
+
+- Coveralls
+- Istanbul
