@@ -241,6 +241,7 @@
 
 - [Lecture: Intro to Grace Shopper](https://youtu.be/ZvdGIoyImaQ)
 - [Lecture: Intro to Bones and Team Git Workflow](https://youtu.be/15DFLSwfjlQ)
+- Lecture: Intro to Deployment / Continuous Integration. [Part I](https://youtu.be/hEWf7g1se_0) and [Part II](https://youtu.be/CfNxW7DTmEA)
 
 ### Technical Interview Prep
 
