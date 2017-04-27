@@ -243,6 +243,10 @@
 - [Lecture: Intro to Bones and Team Git Workflow](https://youtu.be/15DFLSwfjlQ)
 - Lecture: Intro to Deployment / Continuous Integration. [Part I](https://youtu.be/hEWf7g1se_0) and [Part II](https://youtu.be/CfNxW7DTmEA)
 
+### Stackathon
+
+- [Lecture: Intro to Stackathon](https://youtu.be/L5QuI6B2hwws)
+
 ### Technical Interview Prep
 
 - [Lecture: Intro to REACTO](https://youtu.be/SFixtjaEL9E)
