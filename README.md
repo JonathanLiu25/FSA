@@ -247,7 +247,12 @@
 
 - [Lecture: Intro to Stackathon](https://youtu.be/L5QuI6B2hwws)
 
+### Capstone
+
+- [Lecture: Intro to Capstone](https://youtu.be/bwm1dAclLhE)
+
 ### Technical Interview Prep
 
 - [Lecture: Intro to REACTO](https://youtu.be/SFixtjaEL9E)
 - Lecture: Big O [Part I](https://youtu.be/ip1hCdMnTcA) and [Part II](https://youtu.be/j6aL8xoPhHE)
+- [Lecture: Optimizations](https://youtu.be/Anq59LDcWOM)
