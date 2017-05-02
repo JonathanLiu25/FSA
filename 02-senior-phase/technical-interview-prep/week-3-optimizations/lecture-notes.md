@@ -44,6 +44,8 @@
 - Set
 - Sorted set, sorted array
 - Linked list
+- Queue
+- Stack
 
 ## Sorting
 
