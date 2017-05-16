@@ -256,3 +256,4 @@
 - [Lecture: Intro to REACTO](https://youtu.be/SFixtjaEL9E)
 - Lecture: Big O [Part I](https://youtu.be/ip1hCdMnTcA) and [Part II](https://youtu.be/j6aL8xoPhHE)
 - [Lecture: Optimizations](https://youtu.be/Anq59LDcWOM)
+- [Lecture: Functional Programming](https://youtu.be/KB9_Bwvb_tc)
