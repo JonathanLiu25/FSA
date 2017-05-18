@@ -250,6 +250,9 @@
 ### Capstone
 
 - [Lecture: Intro to Capstone](https://youtu.be/bwm1dAclLhE)
+- [Brief: Demo Day](https://youtu.be/mp6gpqjjtUM)
+- [Lecture: Demo Day Presentations](https://youtu.be/cM2D70LwVsY)
+- Demo: Using Camtasia for Screencasts - [Part I](https://youtu.be/VD_LkXungNA) and [Part II](https://youtu.be/uKzbdmmlLYY)
 
 ### Technical Interview Prep
 
