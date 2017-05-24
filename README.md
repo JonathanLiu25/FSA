@@ -260,3 +260,10 @@
 - Lecture: Big O [Part I](https://youtu.be/ip1hCdMnTcA) and [Part II](https://youtu.be/j6aL8xoPhHE)
 - [Lecture: Optimizations](https://youtu.be/Anq59LDcWOM)
 - [Lecture: Functional Programming](https://youtu.be/KB9_Bwvb_tc)
+
+### CTO
+
+- [Agile](https://youtu.be/Qs7TiX3pFSY)
+- [Architecture](https://youtu.be/n6pvRqsd-40?t=31m20s)
+- [Lean Startup](https://youtu.be/ByBmpTK__aU)
+- [Scalability](https://youtu.be/P4qy94SDOrc)
