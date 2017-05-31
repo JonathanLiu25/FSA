@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Angular.js Lecture</title>
+</head>
+<body>
+
+    <!--<div ng-app="PuppyShop" ng-controller="MainController">-->
+        <!--{{ name }}-->
+        <!--<button ng-click="changeName()">Click me</button>-->
+    <!--</div>-->
+
+    <div ng-app="PuppyShop" ng-controller="MainController">
+        <button ng-click="addPuppy()" ng-controller="AddPuppyController">Add Puppy</button>
+        <ul id="puppy-list" ng-controller="ListController">
+            <li ng-repeat="puppy in puppies">
+                <h1>{{ puppy.name }}</h1>
+                <h2>{{ puppy.price }}</h2>
+                <ul ng-show="puppy.allergies">
+                    <li ng-repeat="allergy in puppy.allergies">
+                        {{ allergy }}
+                    </li>
+                </ul>
+                <h6 ng-show="puppy.price > 0">This puppy is for sale!</h6>
+                <h6 ng-hide="!puppy.cute">This puppy is cute!</h6>
+            </li>
+        </ul>
+    </div>
+
+    <script src="/angular/angular.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

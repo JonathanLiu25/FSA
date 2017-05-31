@@ -1,0 +1,72 @@
+<html>
+
+<head>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="client.js"></script>
+</head>
+
+<body ng-app="kittygogo">
+
+  <div ng-controller="NavbarController" style="text-align:center">Welcome <b style="color:black">{{username}}</b>
+    <h1>Fund Catrepreneurs</h1>
+    <h4>=^.^= Everybody wants to be a cat =^.^=</h4>
+<!--     <div>
+      <span>Height: </span><input type="" ng-model="height">
+      <span>Width: </span><input type="" ng-model="width">
+      <img src="http://placekitten.com/g/{{width}}/{{height}}">
+    </div> -->
+    <button ng-click="showScope()">Show me scope</button>
+    <!-- <pre style="text-align:left">{{paymentForm | json}}</pre> -->
+    <!-- <pre style="text-align:left">{{card | json}}</pre> -->
+    <form name="paymentForm">
+      <div >
+        <span style="color:red" ng-show="paymentForm.numberField.$error.required">Number: Does not exist</span>
+        <span style="color:red" ng-show="paymentForm.numberField.$error.minlength">Number is too short!</span>
+
+      </div>
+        <input ng-model="card.info.number" name="numberField" required ng-minlength=16>
+
+      <span style="color:red" ng-show="paymentForm.typeField.$invalid">Choose a type</span>
+      <select ng-model="card.info.type" name="typeField" required>
+        <option>Visa</option>
+        <option>MasterCard</option>
+      </select>
+      <button ng-disabled="paymentForm.$invalid">Submit</button>
+      
+    </form>
+  </div>
+
+
+
+
+
+  <div ng-controller="MainController">
+    <hr>
+    <input type="text" ng-model="amount"> <!-- $scope ==> $scope.amount -->
+    <div ng-repeat="kitten in kittenProjects">
+      <div ng-click="kitten.showDetails = !kitten.showDetails">
+        <span style="color:purple">{{ kitten.name }}</span>: {{ kitten.project }}
+      </div>
+      <div style="font-size:.5em">
+        Should show? {{ kitten.showDetails }}
+      </div>
+      <div ng-show="kitten.showDetails">
+        <div>$ {{ kitten.raised }} / {{ kitten.target }}</div>
+        <img src="{{ kitten.photo }}">
+        <div>{{ kitten.description }}</div>
+        <button ng-click="addFiveToAmount(kitten)">
+          Add ${{amount}}
+        </button>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+

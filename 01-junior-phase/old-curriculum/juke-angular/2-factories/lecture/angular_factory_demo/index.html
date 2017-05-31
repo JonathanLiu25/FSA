@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="/node_modules/angular/angular.js"></script>
+		<script src="/client.js"></script>
+		<script src="/cartstuff.js"></script>
+		<script src="/productstuff.js"></script>
+	</head>
+	<body ng-app="murray">
+		<div ng-controller="CartCtrl">
+			<h2 ng-controller="UseMath">Purchase some quality Murray photos...</h2>
+			<hr>
+			<p >
+				<span>Your cart has {{ cart.length }} items costing ${{ total() }}</span>
+				<button ng-click="purchaseCart()">checkout</button>
+			</p>
+			<hr>
+		</div>
+		<div ng-controller="ProductsCtrl">
+			<div ng-repeat="picture in products">
+				<h4>
+					<span>{{ picture.title }} - ${{ picture.price }}</span>
+					<button ng-click="addToCart(picture)">must have it</button></h4>
+				<img ng-src="{{ picture.url }}">
+				<hr>
+			</div>
+		</div>
+	</body>
+
+
+</html>
+
+
